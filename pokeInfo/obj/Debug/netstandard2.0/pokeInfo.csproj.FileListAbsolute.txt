@@ -1,0 +1,15 @@
+D:\travail\Xamarin\pokeInfo\pokeInfo\bin\Debug\netstandard2.0\pokeInfo.deps.json
+D:\travail\Xamarin\pokeInfo\pokeInfo\bin\Debug\netstandard2.0\pokeInfo.dll
+D:\travail\Xamarin\pokeInfo\pokeInfo\bin\Debug\netstandard2.0\ref\pokeInfo.dll
+D:\travail\Xamarin\pokeInfo\pokeInfo\bin\Debug\netstandard2.0\pokeInfo.pdb
+D:\travail\Xamarin\pokeInfo\pokeInfo\obj\Debug\netstandard2.0\pokeInfo.csproj.AssemblyReference.cache
+D:\travail\Xamarin\pokeInfo\pokeInfo\obj\Debug\netstandard2.0\pokeInfo.GeneratedMSBuildEditorConfig.editorconfig
+D:\travail\Xamarin\pokeInfo\pokeInfo\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\travail\Xamarin\pokeInfo\pokeInfo\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\travail\Xamarin\pokeInfo\pokeInfo\obj\Debug\netstandard2.0\pokeInfo.AssemblyInfoInputs.cache
+D:\travail\Xamarin\pokeInfo\pokeInfo\obj\Debug\netstandard2.0\pokeInfo.AssemblyInfo.cs
+D:\travail\Xamarin\pokeInfo\pokeInfo\obj\Debug\netstandard2.0\pokeInfo.csproj.CoreCompileInputs.cache
+D:\travail\Xamarin\pokeInfo\pokeInfo\obj\Debug\netstandard2.0\XamlC.stamp
+D:\travail\Xamarin\pokeInfo\pokeInfo\obj\Debug\netstandard2.0\pokeInfo.dll
+D:\travail\Xamarin\pokeInfo\pokeInfo\obj\Debug\netstandard2.0\ref\pokeInfo.dll
+D:\travail\Xamarin\pokeInfo\pokeInfo\obj\Debug\netstandard2.0\pokeInfo.pdb
