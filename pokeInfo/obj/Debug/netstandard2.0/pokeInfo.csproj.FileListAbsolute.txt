@@ -13,3 +13,4 @@ D:\travail\Xamarin\pokeInfo\pokeInfo\obj\Debug\netstandard2.0\XamlC.stamp
 D:\travail\Xamarin\pokeInfo\pokeInfo\obj\Debug\netstandard2.0\pokeInfo.dll
 D:\travail\Xamarin\pokeInfo\pokeInfo\obj\Debug\netstandard2.0\ref\pokeInfo.dll
 D:\travail\Xamarin\pokeInfo\pokeInfo\obj\Debug\netstandard2.0\pokeInfo.pdb
+D:\travail\Xamarin\pokeInfo\pokeInfo\obj\Debug\netstandard2.0\HomePage.xaml.g.cs

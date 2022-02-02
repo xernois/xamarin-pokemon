@@ -627,3 +627,5 @@ D:\travail\Xamarin\pokeInfo\pokeInfo.Android\obj\Debug\120\stamp\_ConvertResourc
 D:\travail\Xamarin\pokeInfo\pokeInfo.Android\obj\Debug\120\stamp\_GenerateJavaStubs.stamp
 D:\travail\Xamarin\pokeInfo\pokeInfo.Android\obj\Debug\120\stamp\_GeneratePackageManagerJava.stamp
 D:\travail\Xamarin\pokeInfo\pokeInfo.Android\obj\Debug\120\stamp\_ResolveLibraryProjectImports.stamp
+D:\travail\Xamarin\pokeInfo\pokeInfo.Android\obj\Debug\120\res\drawable\poke_info.png
+D:\travail\Xamarin\pokeInfo\pokeInfo.Android\obj\Debug\120\res\drawable\rowlet_home.png

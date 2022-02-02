@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "d9cfee2a-b981-429c-bb8a-69d10cb292fe": {
+      "ProjectGuid": "d9cfee2a-b981-429c-bb8a-69d10cb292fe",
+      "DisplayName": "pokeInfo",
+      "ColorIndex": 0
+    },
+    "a9b99218-f914-4153-ba1f-262739538ace": {
+      "ProjectGuid": "a9b99218-f914-4153-ba1f-262739538ace",
+      "DisplayName": "pokeInfo.Android",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

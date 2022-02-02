@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pokeInfo.HomePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="poke_info.png" />
+            <Image Source="rowlet_home.png" />
+            <Label Text="Description de cette application qui est un projet realisé en cours pour apprendre a utilisé Xamarin un framework pour construire des application mobiles." />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
