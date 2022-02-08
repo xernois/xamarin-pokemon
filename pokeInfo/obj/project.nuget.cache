@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "f4/YKzrgGPRj+v5Ky15fpO1CNlNqI13XtmWQf2A8Gl0DhpdTHyD0cj1O7jHgfo/gPu+xvBJbYuM39PjZsskJlA==",
+  "dgSpecHash": "ClD/gvJnHmCNhTgNdreiYNc4ZAceuRod2sOokRVNNbtVWBT3hX4BKVXhKc9t6aYNwrz7B/2LeKbJ1DbSFeuG2g==",
   "success": true,
-  "projectFilePath": "D:\\travail\\Xamarin\\pokeInfo\\pokeInfo\\pokeInfo.csproj",
+  "projectFilePath": "C:\\code\\Xamarin\\xamarin-pokemon\\pokeInfo\\pokeInfo.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\antoi\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\antoi\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\antoi\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\antoi\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\antoi\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+    "C:\\Users\\grenk\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\grenk\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\grenk\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\grenk\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\grenk\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
   ],
   "logs": []
 }

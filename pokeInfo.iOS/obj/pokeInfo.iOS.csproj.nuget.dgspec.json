@@ -1,22 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "D:\\travail\\Xamarin\\pokeInfo\\pokeInfo.iOS\\pokeInfo.iOS.csproj": {}
+    "C:\\code\\Xamarin\\xamarin-pokemon\\pokeInfo.iOS\\pokeInfo.iOS.csproj": {}
   },
   "projects": {
-    "D:\\travail\\Xamarin\\pokeInfo\\pokeInfo.iOS\\pokeInfo.iOS.csproj": {
+    "C:\\code\\Xamarin\\xamarin-pokemon\\pokeInfo.iOS\\pokeInfo.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\travail\\Xamarin\\pokeInfo\\pokeInfo.iOS\\pokeInfo.iOS.csproj",
+        "projectUniqueName": "C:\\code\\Xamarin\\xamarin-pokemon\\pokeInfo.iOS\\pokeInfo.iOS.csproj",
         "projectName": "pokeInfo.iOS",
-        "projectPath": "D:\\travail\\Xamarin\\pokeInfo\\pokeInfo.iOS\\pokeInfo.iOS.csproj",
-        "packagesPath": "C:\\Users\\antoi\\.nuget\\packages\\",
-        "outputPath": "D:\\travail\\Xamarin\\pokeInfo\\pokeInfo.iOS\\obj\\",
+        "projectPath": "C:\\code\\Xamarin\\xamarin-pokemon\\pokeInfo.iOS\\pokeInfo.iOS.csproj",
+        "packagesPath": "C:\\Users\\grenk\\.nuget\\packages\\",
+        "outputPath": "C:\\code\\Xamarin\\xamarin-pokemon\\pokeInfo.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\antoi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\grenk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "xamarinios10"
@@ -28,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "D:\\travail\\Xamarin\\pokeInfo\\pokeInfo\\pokeInfo.csproj": {
-                "projectPath": "D:\\travail\\Xamarin\\pokeInfo\\pokeInfo\\pokeInfo.csproj"
+              "C:\\code\\Xamarin\\xamarin-pokemon\\pokeInfo\\pokeInfo.csproj": {
+                "projectPath": "C:\\code\\Xamarin\\xamarin-pokemon\\pokeInfo\\pokeInfo.csproj"
               }
             }
           }
@@ -61,18 +65,22 @@
         }
       }
     },
-    "D:\\travail\\Xamarin\\pokeInfo\\pokeInfo\\pokeInfo.csproj": {
+    "C:\\code\\Xamarin\\xamarin-pokemon\\pokeInfo\\pokeInfo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\travail\\Xamarin\\pokeInfo\\pokeInfo\\pokeInfo.csproj",
+        "projectUniqueName": "C:\\code\\Xamarin\\xamarin-pokemon\\pokeInfo\\pokeInfo.csproj",
         "projectName": "pokeInfo",
-        "projectPath": "D:\\travail\\Xamarin\\pokeInfo\\pokeInfo\\pokeInfo.csproj",
-        "packagesPath": "C:\\Users\\antoi\\.nuget\\packages\\",
-        "outputPath": "D:\\travail\\Xamarin\\pokeInfo\\pokeInfo\\obj\\",
+        "projectPath": "C:\\code\\Xamarin\\xamarin-pokemon\\pokeInfo\\pokeInfo.csproj",
+        "packagesPath": "C:\\Users\\grenk\\.nuget\\packages\\",
+        "outputPath": "C:\\code\\Xamarin\\xamarin-pokemon\\pokeInfo\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\antoi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\grenk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"

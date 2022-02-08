@@ -4,7 +4,32 @@
              x:Class="pokeInfo.Views.PokemonListView">
 
     <ContentView.Content>
-        <StackLayout>
+
+
+
+
+
+    <CollectionView ItemsSource="{Binding Items}">
+        <CollectionView.ItemsLayout>
+                   <GridItemsLayout Orientation="Vertical"
+                                    Span="3" />
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate> 
+            <DataTemplate>
+                <FlexLayout 
+                    Direction="Column"
+                    AlignItems="Center"
+                    BackgroundColor="#F00"*
+                >
+                    <Image Source="{Binding ImageName}" HeightRequest="80" WidthRequest="80" />
+                    <Label Text="{Binding Name}" />
+                </FlexLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+
+
+            <!--<StackLayout >
             <SearchBar Placeholder="Rechercher" PlaceholderColor="#666666"/>
             <ListView
             CachingStrategy="RecycleElement"
@@ -12,16 +37,17 @@
             RowHeight="100">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell StyleId="{}{width: &quot;30%&quot;}">
+                    <ViewCell StyleId="">
                         <StackLayout Margin="0,8">
                                 <Image Source="{Binding ImageName}" HeightRequest="80" WidthRequest="80" />
                                 <Label Text="{Binding Name}" />
-                            </StackLayout>
+                        </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        </StackLayout>
+        </StackLayout>-->
+
     </ContentView.Content>
 
 </ContentView>
