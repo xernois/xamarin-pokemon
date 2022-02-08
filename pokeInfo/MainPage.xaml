@@ -4,20 +4,17 @@
              xmlns:pokeInfo="clr-namespace:pokeInfo"
              x:Class="pokeInfo.MainPage">
 
-       <TabBar>
+       <TabBar TabIndex="1">
             <ShellContent Title="rowlet" Icon="rowlet_home.png" >
-                <pokeInfo:HomePage/>
+                <pokeInfo:PokemonListPage/>
             </ShellContent>
         <ShellContent Title="rowlet" Icon="rowlet_home.png" >
             <pokeInfo:HomePage/>
         </ShellContent>
         <ShellContent Title="rowlet" Icon="rowlet_home.png" >
-            <pokeInfo:HomePage/>
+            <pokeInfo:AddPokemonePage/>
         </ShellContent>
-        <ShellContent Title="rowlet" Icon="rowlet_home.png" >
-            <pokeInfo:HomePage/>
-        </ShellContent>
-    </TabBar>
+     </TabBar>
 
 </Shell>
 

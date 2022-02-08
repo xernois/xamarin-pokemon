@@ -14,3 +14,6 @@ D:\travail\Xamarin\pokeInfo\pokeInfo\obj\Debug\netstandard2.0\pokeInfo.dll
 D:\travail\Xamarin\pokeInfo\pokeInfo\obj\Debug\netstandard2.0\ref\pokeInfo.dll
 D:\travail\Xamarin\pokeInfo\pokeInfo\obj\Debug\netstandard2.0\pokeInfo.pdb
 D:\travail\Xamarin\pokeInfo\pokeInfo\obj\Debug\netstandard2.0\HomePage.xaml.g.cs
+D:\travail\Xamarin\pokeInfo\pokeInfo\obj\Debug\netstandard2.0\AddPokemonePage.xaml.g.cs
+D:\travail\Xamarin\pokeInfo\pokeInfo\obj\Debug\netstandard2.0\PokemonListPage.xaml.g.cs
+D:\travail\Xamarin\pokeInfo\pokeInfo\obj\Debug\netstandard2.0\Views\PokemonListView.xaml.g.cs

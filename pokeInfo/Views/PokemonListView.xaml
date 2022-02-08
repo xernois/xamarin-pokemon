@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pokeInfo.Views.PokemonListView">
+
+    <ContentView.Content>
+        <StackLayout>
+            <SearchBar Placeholder="Rechercher" PlaceholderColor="#666666"/>
+            <ListView
+            CachingStrategy="RecycleElement"
+            ItemsSource="{Binding Items}"
+            RowHeight="100">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell StyleId="{}{width: &quot;30%&quot;}">
+                        <StackLayout Margin="0,8">
+                                <Image Source="{Binding ImageName}" HeightRequest="80" WidthRequest="80" />
+                                <Label Text="{Binding Name}" />
+                            </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        </StackLayout>
+    </ContentView.Content>
+
+</ContentView>
