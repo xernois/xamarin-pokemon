@@ -4,14 +4,14 @@
              xmlns:pokeInfo="clr-namespace:pokeInfo"
              x:Class="pokeInfo.MainPage">
 
-       <TabBar TabIndex="1">
+    <TabBar TabIndex="1" FlyoutDisplayOptions="AsSingleItem" FlyoutItemIsVisible="True">
+        <ShellContent Title="rowlet" Icon="rowlet_home.png" >
+            <pokeInfo:PokemonListPage/>
+        </ShellContent>
+        
         <ShellContent Title="rowlet" Icon="rowlet_home.png" >
             <pokeInfo:HomePage/>
         </ShellContent>
-
-        <ShellContent Title="rowlet" Icon="rowlet_home.png" >
-                <pokeInfo:PokemonListPage/>
-            </ShellContent>
 
         <ShellContent Title="rowlet" Icon="rowlet_home.png" >
             <pokeInfo:AddPokemonePage/>

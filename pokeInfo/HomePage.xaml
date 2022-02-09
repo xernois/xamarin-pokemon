@@ -6,7 +6,9 @@
         <StackLayout>
             <Image Source="poke_info.png" />
             <Image Source="rowlet_home.png" />
-            <Label Text="Description de cette application qui est un projet realisé en cours pour apprendre a utilisé Xamarin un framework pour construire des application mobiles." />
+            <Label  
+                HorizontalTextAlignment="Center"
+                Text="Description de cette application qui est un projet realisé en cours pour apprendre a utilisé Xamarin un framework pour construire des application mobiles." />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

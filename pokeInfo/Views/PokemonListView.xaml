@@ -17,7 +17,7 @@
                         Direction="Column"
                         AlignItems="Center"
                     >
-                        <Image Source="{Binding Sprites.FrontDefault}" HeightRequest="80" WidthRequest="80" />
+                        <Image Source="{Binding Sprites.FrontShiny}" HeightRequest="80" WidthRequest="80" />
                             <Label Text="{Binding Name}" />
                         </FlexLayout>
                 </DataTemplate>
