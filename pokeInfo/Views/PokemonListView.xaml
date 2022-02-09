@@ -1,52 +1,28 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="pokeInfo.Views.PokemonListView">
+<ContentView 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="pokeInfo.Views.PokemonListView">
 
     <ContentView.Content>
 
-
-
-
-
-    <CollectionView ItemsSource="{Binding Items}">
-        <CollectionView.ItemsLayout>
-                   <GridItemsLayout Orientation="Vertical"
+        <CollectionView ItemsSource="{Binding Items}">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical"
                                     Span="3" />
-        </CollectionView.ItemsLayout>
-        <CollectionView.ItemTemplate> 
-            <DataTemplate>
-                <FlexLayout 
-                    Direction="Column"
-                    AlignItems="Center"
-                    BackgroundColor="#F00"*
-                >
-                    <Image Source="{Binding ImageName}" HeightRequest="80" WidthRequest="80" />
-                    <Label Text="{Binding Name}" />
-                </FlexLayout>
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
-
-
-            <!--<StackLayout >
-            <SearchBar Placeholder="Rechercher" PlaceholderColor="#666666"/>
-            <ListView
-            CachingStrategy="RecycleElement"
-            ItemsSource="{Binding Items}"
-            RowHeight="100">
-            <ListView.ItemTemplate>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell StyleId="">
-                        <StackLayout Margin="0,8">
-                                <Image Source="{Binding ImageName}" HeightRequest="80" WidthRequest="80" />
-                                <Label Text="{Binding Name}" />
-                        </StackLayout>
-                    </ViewCell>
+                    <FlexLayout 
+                        Direction="Column"
+                        AlignItems="Center"
+                    >
+                        <Image Source="{Binding Sprites.FrontDefault}" HeightRequest="80" WidthRequest="80" />
+                            <Label Text="{Binding Name}" />
+                        </FlexLayout>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        </StackLayout>-->
+            </CollectionView.ItemTemplate>
+        </CollectionView>
 
     </ContentView.Content>
 

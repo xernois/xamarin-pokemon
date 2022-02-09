@@ -5,16 +5,18 @@
              x:Class="pokeInfo.MainPage">
 
        <TabBar TabIndex="1">
-            <ShellContent Title="rowlet" Icon="rowlet_home.png" >
-                <pokeInfo:PokemonListPage/>
-            </ShellContent>
         <ShellContent Title="rowlet" Icon="rowlet_home.png" >
             <pokeInfo:HomePage/>
         </ShellContent>
+
+        <ShellContent Title="rowlet" Icon="rowlet_home.png" >
+                <pokeInfo:PokemonListPage/>
+            </ShellContent>
+
         <ShellContent Title="rowlet" Icon="rowlet_home.png" >
             <pokeInfo:AddPokemonePage/>
         </ShellContent>
-     </TabBar>
+    </TabBar>
 
 </Shell>
 

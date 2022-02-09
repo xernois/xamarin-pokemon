@@ -36,9 +36,9 @@ application_config:
 	/* system_property_count */
 	.word	0
 	/* number_of_assemblies_in_apk */
-	.word	85
+	.word	99
 	/* bundled_assembly_name_width */
-	.word	63
+	.word	70
 	/* android_package_name */
 	.xword	.L.env.str.1
 	.size	application_config, 40
@@ -79,7 +79,7 @@ mono_aot_mode_name:
 	.section	.rodata.env.str.8,"aMS",@progbits,1
 	.type	.L.env.str.8, @object
 .L.env.str.8:
-	.asciz	"38a5aa5a-bba8-4816-b8e3-c973874f1f0f"
+	.asciz	"b5b3f837-139f-4666-a435-263ccb098603"
 	.size	.L.env.str.8, 37
 	.section	.rodata.env.str.9,"aMS",@progbits,1
 	.type	.L.env.str.9, @object
@@ -135,178 +135,206 @@ app_environment_variables:
 	.global	app_system_properties
 app_system_properties:
 	.size	app_system_properties, 0
-	/* Bundled assembly name buffers, all 63 bytes long */
+	/* Bundled assembly name buffers, all 70 bytes long */
 	.section	.bss.bundled_assembly_names,"aw",@nobits
 .L.env.buf.1:
-	.zero	63
+	.zero	70
 .L.env.buf.2:
-	.zero	63
+	.zero	70
 .L.env.buf.3:
-	.zero	63
+	.zero	70
 .L.env.buf.4:
-	.zero	63
+	.zero	70
 .L.env.buf.5:
-	.zero	63
+	.zero	70
 .L.env.buf.6:
-	.zero	63
+	.zero	70
 .L.env.buf.7:
-	.zero	63
+	.zero	70
 .L.env.buf.8:
-	.zero	63
+	.zero	70
 .L.env.buf.9:
-	.zero	63
+	.zero	70
 .L.env.buf.10:
-	.zero	63
+	.zero	70
 .L.env.buf.11:
-	.zero	63
+	.zero	70
 .L.env.buf.12:
-	.zero	63
+	.zero	70
 .L.env.buf.13:
-	.zero	63
+	.zero	70
 .L.env.buf.14:
-	.zero	63
+	.zero	70
 .L.env.buf.15:
-	.zero	63
+	.zero	70
 .L.env.buf.16:
-	.zero	63
+	.zero	70
 .L.env.buf.17:
-	.zero	63
+	.zero	70
 .L.env.buf.18:
-	.zero	63
+	.zero	70
 .L.env.buf.19:
-	.zero	63
+	.zero	70
 .L.env.buf.20:
-	.zero	63
+	.zero	70
 .L.env.buf.21:
-	.zero	63
+	.zero	70
 .L.env.buf.22:
-	.zero	63
+	.zero	70
 .L.env.buf.23:
-	.zero	63
+	.zero	70
 .L.env.buf.24:
-	.zero	63
+	.zero	70
 .L.env.buf.25:
-	.zero	63
+	.zero	70
 .L.env.buf.26:
-	.zero	63
+	.zero	70
 .L.env.buf.27:
-	.zero	63
+	.zero	70
 .L.env.buf.28:
-	.zero	63
+	.zero	70
 .L.env.buf.29:
-	.zero	63
+	.zero	70
 .L.env.buf.30:
-	.zero	63
+	.zero	70
 .L.env.buf.31:
-	.zero	63
+	.zero	70
 .L.env.buf.32:
-	.zero	63
+	.zero	70
 .L.env.buf.33:
-	.zero	63
+	.zero	70
 .L.env.buf.34:
-	.zero	63
+	.zero	70
 .L.env.buf.35:
-	.zero	63
+	.zero	70
 .L.env.buf.36:
-	.zero	63
+	.zero	70
 .L.env.buf.37:
-	.zero	63
+	.zero	70
 .L.env.buf.38:
-	.zero	63
+	.zero	70
 .L.env.buf.39:
-	.zero	63
+	.zero	70
 .L.env.buf.40:
-	.zero	63
+	.zero	70
 .L.env.buf.41:
-	.zero	63
+	.zero	70
 .L.env.buf.42:
-	.zero	63
+	.zero	70
 .L.env.buf.43:
-	.zero	63
+	.zero	70
 .L.env.buf.44:
-	.zero	63
+	.zero	70
 .L.env.buf.45:
-	.zero	63
+	.zero	70
 .L.env.buf.46:
-	.zero	63
+	.zero	70
 .L.env.buf.47:
-	.zero	63
+	.zero	70
 .L.env.buf.48:
-	.zero	63
+	.zero	70
 .L.env.buf.49:
-	.zero	63
+	.zero	70
 .L.env.buf.50:
-	.zero	63
+	.zero	70
 .L.env.buf.51:
-	.zero	63
+	.zero	70
 .L.env.buf.52:
-	.zero	63
+	.zero	70
 .L.env.buf.53:
-	.zero	63
+	.zero	70
 .L.env.buf.54:
-	.zero	63
+	.zero	70
 .L.env.buf.55:
-	.zero	63
+	.zero	70
 .L.env.buf.56:
-	.zero	63
+	.zero	70
 .L.env.buf.57:
-	.zero	63
+	.zero	70
 .L.env.buf.58:
-	.zero	63
+	.zero	70
 .L.env.buf.59:
-	.zero	63
+	.zero	70
 .L.env.buf.60:
-	.zero	63
+	.zero	70
 .L.env.buf.61:
-	.zero	63
+	.zero	70
 .L.env.buf.62:
-	.zero	63
+	.zero	70
 .L.env.buf.63:
-	.zero	63
+	.zero	70
 .L.env.buf.64:
-	.zero	63
+	.zero	70
 .L.env.buf.65:
-	.zero	63
+	.zero	70
 .L.env.buf.66:
-	.zero	63
+	.zero	70
 .L.env.buf.67:
-	.zero	63
+	.zero	70
 .L.env.buf.68:
-	.zero	63
+	.zero	70
 .L.env.buf.69:
-	.zero	63
+	.zero	70
 .L.env.buf.70:
-	.zero	63
+	.zero	70
 .L.env.buf.71:
-	.zero	63
+	.zero	70
 .L.env.buf.72:
-	.zero	63
+	.zero	70
 .L.env.buf.73:
-	.zero	63
+	.zero	70
 .L.env.buf.74:
-	.zero	63
+	.zero	70
 .L.env.buf.75:
-	.zero	63
+	.zero	70
 .L.env.buf.76:
-	.zero	63
+	.zero	70
 .L.env.buf.77:
-	.zero	63
+	.zero	70
 .L.env.buf.78:
-	.zero	63
+	.zero	70
 .L.env.buf.79:
-	.zero	63
+	.zero	70
 .L.env.buf.80:
-	.zero	63
+	.zero	70
 .L.env.buf.81:
-	.zero	63
+	.zero	70
 .L.env.buf.82:
-	.zero	63
+	.zero	70
 .L.env.buf.83:
-	.zero	63
+	.zero	70
 .L.env.buf.84:
-	.zero	63
+	.zero	70
 .L.env.buf.85:
-	.zero	63
+	.zero	70
+.L.env.buf.86:
+	.zero	70
+.L.env.buf.87:
+	.zero	70
+.L.env.buf.88:
+	.zero	70
+.L.env.buf.89:
+	.zero	70
+.L.env.buf.90:
+	.zero	70
+.L.env.buf.91:
+	.zero	70
+.L.env.buf.92:
+	.zero	70
+.L.env.buf.93:
+	.zero	70
+.L.env.buf.94:
+	.zero	70
+.L.env.buf.95:
+	.zero	70
+.L.env.buf.96:
+	.zero	70
+.L.env.buf.97:
+	.zero	70
+.L.env.buf.98:
+	.zero	70
+.L.env.buf.99:
+	.zero	70
 	/* Bundled assemblies data */
 	.section	.data.bundled_assemblies,"aw",@progbits
 	.type	bundled_assemblies, @object
@@ -1588,4 +1616,214 @@ bundled_assemblies:
 	.zero	4
 	.xword	.L.env.buf.85
 
-	.size	bundled_assemblies, 3400
+	/* apk_fd */
+	.word	-1
+	/* data_offset */
+	.word	0
+	/* data_size */
+	.word	0
+	/* data */
+	.zero	4
+	.xword	0
+	/* name_length */
+	.word	0
+	/* name */
+	.zero	4
+	.xword	.L.env.buf.86
+
+	/* apk_fd */
+	.word	-1
+	/* data_offset */
+	.word	0
+	/* data_size */
+	.word	0
+	/* data */
+	.zero	4
+	.xword	0
+	/* name_length */
+	.word	0
+	/* name */
+	.zero	4
+	.xword	.L.env.buf.87
+
+	/* apk_fd */
+	.word	-1
+	/* data_offset */
+	.word	0
+	/* data_size */
+	.word	0
+	/* data */
+	.zero	4
+	.xword	0
+	/* name_length */
+	.word	0
+	/* name */
+	.zero	4
+	.xword	.L.env.buf.88
+
+	/* apk_fd */
+	.word	-1
+	/* data_offset */
+	.word	0
+	/* data_size */
+	.word	0
+	/* data */
+	.zero	4
+	.xword	0
+	/* name_length */
+	.word	0
+	/* name */
+	.zero	4
+	.xword	.L.env.buf.89
+
+	/* apk_fd */
+	.word	-1
+	/* data_offset */
+	.word	0
+	/* data_size */
+	.word	0
+	/* data */
+	.zero	4
+	.xword	0
+	/* name_length */
+	.word	0
+	/* name */
+	.zero	4
+	.xword	.L.env.buf.90
+
+	/* apk_fd */
+	.word	-1
+	/* data_offset */
+	.word	0
+	/* data_size */
+	.word	0
+	/* data */
+	.zero	4
+	.xword	0
+	/* name_length */
+	.word	0
+	/* name */
+	.zero	4
+	.xword	.L.env.buf.91
+
+	/* apk_fd */
+	.word	-1
+	/* data_offset */
+	.word	0
+	/* data_size */
+	.word	0
+	/* data */
+	.zero	4
+	.xword	0
+	/* name_length */
+	.word	0
+	/* name */
+	.zero	4
+	.xword	.L.env.buf.92
+
+	/* apk_fd */
+	.word	-1
+	/* data_offset */
+	.word	0
+	/* data_size */
+	.word	0
+	/* data */
+	.zero	4
+	.xword	0
+	/* name_length */
+	.word	0
+	/* name */
+	.zero	4
+	.xword	.L.env.buf.93
+
+	/* apk_fd */
+	.word	-1
+	/* data_offset */
+	.word	0
+	/* data_size */
+	.word	0
+	/* data */
+	.zero	4
+	.xword	0
+	/* name_length */
+	.word	0
+	/* name */
+	.zero	4
+	.xword	.L.env.buf.94
+
+	/* apk_fd */
+	.word	-1
+	/* data_offset */
+	.word	0
+	/* data_size */
+	.word	0
+	/* data */
+	.zero	4
+	.xword	0
+	/* name_length */
+	.word	0
+	/* name */
+	.zero	4
+	.xword	.L.env.buf.95
+
+	/* apk_fd */
+	.word	-1
+	/* data_offset */
+	.word	0
+	/* data_size */
+	.word	0
+	/* data */
+	.zero	4
+	.xword	0
+	/* name_length */
+	.word	0
+	/* name */
+	.zero	4
+	.xword	.L.env.buf.96
+
+	/* apk_fd */
+	.word	-1
+	/* data_offset */
+	.word	0
+	/* data_size */
+	.word	0
+	/* data */
+	.zero	4
+	.xword	0
+	/* name_length */
+	.word	0
+	/* name */
+	.zero	4
+	.xword	.L.env.buf.97
+
+	/* apk_fd */
+	.word	-1
+	/* data_offset */
+	.word	0
+	/* data_size */
+	.word	0
+	/* data */
+	.zero	4
+	.xword	0
+	/* name_length */
+	.word	0
+	/* name */
+	.zero	4
+	.xword	.L.env.buf.98
+
+	/* apk_fd */
+	.word	-1
+	/* data_offset */
+	.word	0
+	/* data_size */
+	.word	0
+	/* data */
+	.zero	4
+	.xword	0
+	/* name_length */
+	.word	0
+	/* name */
+	.zero	4
+	.xword	.L.env.buf.99
+
+	.size	bundled_assemblies, 3960
