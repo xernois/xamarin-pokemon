@@ -1290,3 +1290,6 @@ C:\code\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\android\assets\Sy
 C:\code\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\android\assets\System.Memory.dll
 C:\code\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\android\assets\System.Runtime.CompilerServices.Unsafe.dll
 C:\code\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\android\assets\System.Text.Encodings.Web.dll
+C:\code\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\res\drawable\globenav.png
+C:\code\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\res\drawable\plusnav.png
+C:\code\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\res\drawable\pokeball.png

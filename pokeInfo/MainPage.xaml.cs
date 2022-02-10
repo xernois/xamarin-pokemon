@@ -13,6 +13,12 @@ namespace pokeInfo
         public MainPage()
         {
             InitializeComponent();
+            InitPageHome();
+        }
+
+        private void InitPageHome()
+        {
+            main_tab_bar.CurrentItem = main_tab_bar_home;
         }
     }
 }

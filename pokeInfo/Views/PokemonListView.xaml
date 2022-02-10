@@ -9,17 +9,36 @@
         <CollectionView ItemsSource="{Binding Items}">
             <CollectionView.ItemsLayout>
                 <GridItemsLayout Orientation="Vertical"
-                                    Span="3" />
+                                 Span="3"/>
             </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <FlexLayout 
-                        Direction="Column"
-                        AlignItems="Center"
-                    >
-                        <Image Source="{Binding Sprites.FrontShiny}" HeightRequest="80" WidthRequest="80" />
-                            <Label Text="{Binding Name}" />
-                        </FlexLayout>
+                    <FlexLayout Direction="Column"
+                                AlignItems="Center">
+                        
+                        <Frame CornerRadius="5" 
+                               HorizontalOptions="Center" 
+                               HeightRequest="60" 
+                               WidthRequest="100"
+                               TranslationY="60" 
+                               HasShadow="True"
+                               BackgroundColor="#74CB48"
+                               Padding="0">
+                            
+                            <StackLayout>
+                                <Label Text="{Binding Name}"
+                                       TranslationY="35"
+                                       HorizontalTextAlignment="Center"
+                                       FontSize="18"
+                                       VerticalTextAlignment="End"/>
+                            </StackLayout>
+                        </Frame>
+
+                        <Image Source="{Binding Sprites.FrontShiny}" 
+                               HeightRequest="80" 
+                               WidthRequest="80"
+                               TranslationY="-40"/>
+                    </FlexLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>

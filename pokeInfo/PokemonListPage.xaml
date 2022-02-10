@@ -4,7 +4,7 @@
              xmlns:view="clr-namespace:pokeInfo.Views"
              x:Class="pokeInfo.PokemonListPage" >
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Margin="20,0,20,0">
             <view:PokemonListView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
