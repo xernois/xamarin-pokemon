@@ -27,9 +27,11 @@
                             
                             <StackLayout>
                                 <Label Text="{Binding Name}"
-                                       TranslationY="35"
+                                       TranslationY="30"
                                        HorizontalTextAlignment="Center"
                                        FontSize="18"
+                                       TextColor="White"
+                                       FontAttributes="Bold"
                                        VerticalTextAlignment="End"/>
                             </StackLayout>
                         </Frame>

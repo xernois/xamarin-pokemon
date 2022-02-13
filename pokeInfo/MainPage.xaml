@@ -3,7 +3,9 @@
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:pokeInfo="clr-namespace:pokeInfo"
        x:Class="pokeInfo.MainPage"
-       TabBarBackgroundColor="#FF1C1C">
+       TabBarBackgroundColor="#FF1C1C"
+       NavBarIsVisible="False"
+       >
 
     <TabBar  x:Name="main_tab_bar" TabIndex="1" FlyoutDisplayOptions="AsSingleItem" FlyoutItemIsVisible="True">
         <ShellContent x:Name="main_tab_bar_list" Title="List" Icon="globeNav.png" >

@@ -21,14 +21,14 @@ namespace pokeInfo.ViewModels
             {
                 items = value;
             }
-        }
+        }   
         public async void initPokemon()
         {
             PokeApiClient pokeClient = new PokeApiClient();
 
             var random = new Random();
 
-            for (int i = 1; i < 50; i++)
+            for (int i = 1; i < 20; i++)
             {
                 
                 Items.Add(await Task.Run(() => pokeClient.GetResourceAsync<Pokemon>(random.Next(1,722))));
