@@ -15,7 +15,7 @@ namespace pokeInfo.Views
         public PokemonListView()
         {
             InitializeComponent();
-            BindingContext = new PokemonViewModel();
+            BindingContext = PokemonViewModel.Instance;
         }
     }
 }

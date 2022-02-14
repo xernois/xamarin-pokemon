@@ -61,11 +61,16 @@ namespace pokeInfo
             spd_label.Text = value.ToString();
         }
 
-        public void OnButtonClicked(object sender, EventArgs args)
+        public async void OnButtonClicked(object sender, EventArgs args)
         {
-            //tentative d'ajout d'un pokemon vide pour tester
-            Pokemon pokemon = new Pokemon();
-            var vm = new PokemonViewModel();
+
+
+            var vm = PokemonViewModel.Instance;
+            Pokemon pokemon = new Pokemon {
+                Name = pokemonName.Text
+            };
+
+            vm.addPokemon(pokemon);
         }
     }
 }
