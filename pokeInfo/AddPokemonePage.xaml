@@ -62,33 +62,33 @@
 
                         <Label Text="HP" Grid.Column="0" Grid.Row="0" TextColor="#FF1C1C" FontAttributes="bold" HorizontalTextAlignment="end" VerticalTextAlignment="Center"/>
                         <BoxView BackgroundColor="#E0E0E0" Grid.Column="1" Grid.Row="0" VerticalOptions="StartAndExpand"/>
-                        <Label Text="044" Grid.Column="2" Grid.Row="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121"/>
-                        <Slider Minimum="0" Maximum="255" Value="44" Grid.Column="3" Grid.Row="0" MinimumTrackColor="#FF1C1C" MaximumTrackColor="#FF1C1C"/>
+                        <Label Text="044" Grid.Column="2" Grid.Row="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121" x:Name="hp_label"/>
+                        <Slider Minimum="0" Maximum="255" Value="44" Grid.Column="3" Grid.Row="0" MinimumTrackColor="#FF1C1C" MaximumTrackColor="#FF1C1C" ValueChanged="OnHpSliderValueChanged"/>
 
                         <Label Text="ATK" Grid.Column="0" Grid.Row="1" TextColor="#FF1C1C" FontAttributes="bold" HorizontalTextAlignment="end" VerticalTextAlignment="Center"/>
                         <BoxView BackgroundColor="#E0E0E0" Grid.Column="1" Grid.Row="1"/>
-                        <Label Text="048" Grid.Column="2" Grid.Row="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121"/>
-                        <Slider Minimum="0" Maximum="255" Value="48" Grid.Column="3" Grid.Row="1" MinimumTrackColor="#FF1C1C" MaximumTrackColor="#FF1C1C"/>
+                        <Label Text="048" Grid.Column="2" Grid.Row="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121" x:Name="atk_label"/>
+                        <Slider Minimum="0" Maximum="255" Value="48" Grid.Column="3" Grid.Row="1" MinimumTrackColor="#FF1C1C" MaximumTrackColor="#FF1C1C" ValueChanged="OnAtkSliderValueChanged"/>
 
                         <Label Text="DEF" Grid.Column="0" Grid.Row="2" TextColor="#FF1C1C" FontAttributes="bold" HorizontalTextAlignment="end" VerticalTextAlignment="Center"/>
                         <BoxView BackgroundColor="#E0E0E0" Grid.Column="1" Grid.Row="2"/>
-                        <Label Text="065" Grid.Column="2" Grid.Row="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121"/>
-                        <Slider Minimum="0" Maximum="255" Value="65" Grid.Column="3" Grid.Row="2" MinimumTrackColor="#FF1C1C" MaximumTrackColor="#FF1C1C"/>
+                        <Label Text="065" Grid.Column="2" Grid.Row="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121" x:Name="def_label"/>
+                        <Slider Minimum="0" Maximum="255" Value="65" Grid.Column="3" Grid.Row="2" MinimumTrackColor="#FF1C1C" MaximumTrackColor="#FF1C1C" ValueChanged="OnDefSliderValueChanged"/>
 
                         <Label Text="SATK" Grid.Column="0" Grid.Row="3" TextColor="#FF1C1C" FontAttributes="bold" HorizontalTextAlignment="end" VerticalTextAlignment="Center"/>
                         <BoxView BackgroundColor="#E0E0E0" Grid.Column="1" Grid.Row="3"/>
-                        <Label Text="050" Grid.Column="2" Grid.Row="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121"/>
-                        <Slider Minimum="0" Maximum="255" Value="50" Grid.Column="3" Grid.Row="3" MinimumTrackColor="#FF1C1C" MaximumTrackColor="#FF1C1C"/>
+                        <Label Text="050" Grid.Column="2" Grid.Row="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121" x:Name="satk_label"/>
+                        <Slider Minimum="0" Maximum="255" Value="50" Grid.Column="3" Grid.Row="3" MinimumTrackColor="#FF1C1C" MaximumTrackColor="#FF1C1C" ValueChanged="OnSatkSliderValueChanged"/>
 
                         <Label Text="SDEF" Grid.Column="0" Grid.Row="4" TextColor="#FF1C1C" FontAttributes="bold" HorizontalTextAlignment="end" VerticalTextAlignment="Center"/>
                         <BoxView BackgroundColor="#E0E0E0" Grid.Column="1" Grid.Row="4"/>
-                        <Label Text="064" Grid.Column="2" Grid.Row="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121"/>
-                        <Slider Minimum="0" Maximum="255" Value="64" Grid.Column="3" Grid.Row="4" MinimumTrackColor="#FF1C1C" MaximumTrackColor="#FF1C1C"/>
+                        <Label Text="064" Grid.Column="2" Grid.Row="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121" x:Name="sdef_label"/>
+                        <Slider Minimum="0" Maximum="255" Value="64" Grid.Column="3" Grid.Row="4" MinimumTrackColor="#FF1C1C" MaximumTrackColor="#FF1C1C" ValueChanged="OnSdefSliderValueChanged"/>
 
                         <Label Text="SPD" Grid.Column="0" Grid.Row="5" TextColor="#FF1C1C" FontAttributes="bold" HorizontalTextAlignment="end" VerticalTextAlignment="Center"/>
                         <BoxView BackgroundColor="#E0E0E0" Grid.Column="1" Grid.Row="5"/>
-                        <Label Text="043" Grid.Column="2" Grid.Row="5" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121"/>
-                        <Slider Minimum="0" Maximum="255" Value="43" Grid.Column="3" Grid.Row="5" MinimumTrackColor="#FF1C1C" MaximumTrackColor="#FF1C1C"/>
+                        <Label Text="043" Grid.Column="2" Grid.Row="5" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121" x:Name="spd_label"/>
+                        <Slider Minimum="0" Maximum="255" Value="43" Grid.Column="3" Grid.Row="5" MinimumTrackColor="#FF1C1C" MaximumTrackColor="#FF1C1C" ValueChanged="OnSpdSliderValueChanged"/>
 
                     </Grid>
                 </StackLayout>
@@ -103,6 +103,7 @@
                 FontSize="20"
                 BorderRadius="7"
                 Margin="0,20,0,20"    
+                Clicked="OnButtonClicked"
                     />
             </StackLayout>
         </ScrollView>
