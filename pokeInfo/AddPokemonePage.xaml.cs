@@ -17,6 +17,8 @@ namespace pokeInfo
         {
             
             InitializeComponent();
+            pokemonNum.Text = String.Empty;
+            pokemonName.Text = String.Empty;
         }
 
         public void OnHpSliderValueChanged(object sender, ValueChangedEventArgs args)
@@ -63,14 +65,41 @@ namespace pokeInfo
 
         public async void OnButtonClicked(object sender, EventArgs args)
         {
+            if (pokemonName.Text == String.Empty)
+            {
+                frameName.BorderColor = Color.Red;
+                Console.WriteLine("nom non !");
+            }
+            else
+            {
+                frameName.BorderColor = Color.FromHex("#00FBC1BC");
+            }
 
+            if (pokemonNum.Text == String.Empty)
+            {
+                frameNum.BorderColor = Color.Red;
+                Console.WriteLine("numéro non !");
+            }
+            else
+            {
+                frameNum.BorderColor = Color.FromHex("#00FBC1BC");
+            }
 
-            var vm = PokemonViewModel.Instance;
-            Pokemon pokemon = new Pokemon {
-                Name = pokemonName.Text
-            };
+            if (pokemonName.Text != String.Empty && pokemonNum.Text != String.Empty)
+            {
+                var vm = PokemonViewModel.Instance;
+                Pokemon pokemon = new Pokemon
+                {
+                    Name = pokemonName.Text
+                };
+               
+                vm.addPokemon(pokemon);
+                
+                pokemonName.Text = String.Empty;
+                pokemonNum.Text = String.Empty;
 
-            vm.addPokemon(pokemon);
+                Console.WriteLine("ajout !");
+            }
         }
     }
 }

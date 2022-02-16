@@ -6,13 +6,19 @@
         <ScrollView>
             <StackLayout Margin="20,20,20,0">
                 <FlexLayout Margin="0,10,0,0">
-                    <Label Text="Nom :" VerticalTextAlignment="Center" Margin="0,0,10,0" TextColor="#666666" FontAttributes="bold" FontSize="18"/>
-                    <Entry WidthRequest="150" x:Name="pokemonName" />
+                    <Label x:Name="labelName" Text="Nom :" VerticalTextAlignment="Center" Margin="0,0,10,0" TextColor="#666666" FontAttributes="bold" FontSize="18"/>
+                    <Frame x:Name="frameName" BorderColor="#00FBC1BC" Padding="1">
+                        <Entry WidthRequest="150" x:Name="pokemonName" />
+                    </Frame>
                 </FlexLayout>
+                
                 <FlexLayout Margin="0,10,0,0">
-                    <Label Text="Numéro :" VerticalTextAlignment="Center" Margin="0,0,10,0" TextColor="#666666" FontAttributes="bold" FontSize="18"/>
-                    <Entry WidthRequest="125" Placeholder="#" Keyboard="Numeric"/>
+                    <Label x:Name="labelNum" Text="Numéro :" VerticalTextAlignment="Center" Margin="0,0,10,0" TextColor="#666666" FontAttributes="bold" FontSize="18"/>
+                    <Frame x:Name="frameNum" BorderColor="#00FBC1BC" Padding="1">
+                        <Entry WidthRequest="125" Keyboard="Numeric" Placeholder="#" x:Name="pokemonNum"/>
+                    </Frame>
                 </FlexLayout>
+                
                 <FlexLayout Margin="0,10,0,0">
                     <Label Text="Type :" VerticalTextAlignment="Center" Margin="0,0,10,0" FontAttributes="bold" FontSize="18"/>
                     <Picker Title="Ajouter" TextColor="#666666">
@@ -38,10 +44,12 @@
                         </Picker.Items>
                     </Picker>
                 </FlexLayout>
+                
                 <StackLayout Margin="0,20,0,0">
                     <Label Text="Description :" TextColor="#666666" FontAttributes="bold" FontSize="18" Padding="0,0,10,0"/>
                     <Editor HeightRequest="100"/>
                 </StackLayout>
+                
                 <StackLayout>
                     <Label Text="Stats :" TextColor="#666666" FontAttributes="bold" FontSize="25"/>
                     <Grid RowSpacing="0">
@@ -93,17 +101,16 @@
                     </Grid>
                 </StackLayout>
 
-                <Button 
-                Text="Ajouter"
-                WidthRequest="126"
-                TextColor="#FFF"
-                BackgroundColor="#FF1C1C"
-                FontAttributes="Bold"
-                HorizontalOptions="Center"
-                FontSize="20"
-                BorderRadius="7"
-                Margin="0,20,0,20"    
-                Clicked="OnButtonClicked"
+                <Button Text="Ajouter"
+                        WidthRequest="126"
+                        TextColor="#FFF"
+                        BackgroundColor="#FF1C1C"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        FontSize="20"
+                        BorderRadius="7"
+                        Margin="0,20,0,20"    
+                        Clicked="OnButtonClicked"
                     />
             </StackLayout>
         </ScrollView>
