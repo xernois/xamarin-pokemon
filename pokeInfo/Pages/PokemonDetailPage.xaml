@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pokeInfo.Pages.PokemonDetailPage">
+    <ContentPage.Content>
+        <ScrollView BackgroundColor="{Binding TypeColor}">
+            <StackLayout>
+                <!-- Btn de retour a la liste -->
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="&lt;" Clicked="BackToList" FontSize="25" TextColor="White" FontAttributes="Bold" Padding="0" Margin="0" BackgroundColor="{Binding TypeColor}"/>
+                    <Label Text="{Binding Name}" TextColor="White" FontAttributes="Bold" FontSize="Title" HorizontalOptions="FillAndExpand"  VerticalTextAlignment="Center" TextTransform="Uppercase"/>
+                    <Label Text="{Binding ID}" TextColor="White" FontAttributes="Bold" FontSize="Medium" VerticalTextAlignment="Center" Margin="0,0,25,0"/>
+                </StackLayout>
+
+                <!-- carte blanche en bas de la page-->
+                <StackLayout Background="white" Margin="7,100,7,0" VerticalOptions="FillAndExpand">
+                    <Image Source="{Binding ImgSrc}" HeightRequest="150" Margin="0,-80,0,0"/>
+                    <!-- Liste des types -->
+                    <FlexLayout>
+                        
+                    </FlexLayout>
+                    <Label Text="A propos" HorizontalOptions="CenterAndExpand" TextColor="{Binding TypeColor}" FontAttributes="Bold" FontSize="20"/>
+                    <!--Poids Taille-->
+                    <FlexLayout>
+                        
+                    </FlexLayout>
+                    <Label Text="{Binding Description}" HorizontalTextAlignment="Center"/>
+                    <Label Text="Stats de base" HorizontalOptions="CenterAndExpand" TextColor="{Binding TypeColor}" FontAttributes="Bold" FontSize="20" />
+
+
+                    <Grid RowSpacing="0" Margin="20,0,20,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="1" />
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                        </Grid.RowDefinitions>
+
+
+                        <Label Text="HP" Grid.Column="0" Grid.Row="0" TextColor="{Binding TypeColor}" FontAttributes="bold" HorizontalTextAlignment="end" VerticalTextAlignment="Center"/>
+                        <BoxView BackgroundColor="#E0E0E0" Grid.Column="1" Grid.Row="0" VerticalOptions="StartAndExpand"/>
+                        <Label Text="044" Grid.Column="2" Grid.Row="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121" x:Name="hp_label"/>
+                        <Slider IsEnabled="False" Minimum="0" Maximum="255" Value="44" Grid.Column="3" Grid.Row="0" MinimumTrackColor="{Binding TypeColor}" MaximumTrackColor="{Binding TypeColor}" />
+
+                    </Grid>
+
+
+
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

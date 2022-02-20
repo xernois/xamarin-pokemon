@@ -42,12 +42,8 @@ D:\travail\Xamarin\xamarin-pokemon\pokeInfo\bin\Debug\netstandard2.0\ref\pokeInf
 D:\travail\Xamarin\xamarin-pokemon\pokeInfo\bin\Debug\netstandard2.0\pokeInfo.pdb
 D:\travail\Xamarin\xamarin-pokemon\pokeInfo\obj\Debug\netstandard2.0\pokeInfo.csproj.AssemblyReference.cache
 D:\travail\Xamarin\xamarin-pokemon\pokeInfo\obj\Debug\netstandard2.0\pokeInfo.GeneratedMSBuildEditorConfig.editorconfig
-D:\travail\Xamarin\xamarin-pokemon\pokeInfo\obj\Debug\netstandard2.0\AddPokemonePage.xaml.g.cs
 D:\travail\Xamarin\xamarin-pokemon\pokeInfo\obj\Debug\netstandard2.0\App.xaml.g.cs
-D:\travail\Xamarin\xamarin-pokemon\pokeInfo\obj\Debug\netstandard2.0\HomePage.xaml.g.cs
 D:\travail\Xamarin\xamarin-pokemon\pokeInfo\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
-D:\travail\Xamarin\xamarin-pokemon\pokeInfo\obj\Debug\netstandard2.0\PokemonListPage.xaml.g.cs
-D:\travail\Xamarin\xamarin-pokemon\pokeInfo\obj\Debug\netstandard2.0\Views\PokemonListView.xaml.g.cs
 D:\travail\Xamarin\xamarin-pokemon\pokeInfo\obj\Debug\netstandard2.0\pokeInfo.AssemblyInfoInputs.cache
 D:\travail\Xamarin\xamarin-pokemon\pokeInfo\obj\Debug\netstandard2.0\pokeInfo.AssemblyInfo.cs
 D:\travail\Xamarin\xamarin-pokemon\pokeInfo\obj\Debug\netstandard2.0\pokeInfo.csproj.CoreCompileInputs.cache
@@ -55,3 +51,7 @@ D:\travail\Xamarin\xamarin-pokemon\pokeInfo\obj\Debug\netstandard2.0\XamlC.stamp
 D:\travail\Xamarin\xamarin-pokemon\pokeInfo\obj\Debug\netstandard2.0\pokeInfo.dll
 D:\travail\Xamarin\xamarin-pokemon\pokeInfo\obj\Debug\netstandard2.0\ref\pokeInfo.dll
 D:\travail\Xamarin\xamarin-pokemon\pokeInfo\obj\Debug\netstandard2.0\pokeInfo.pdb
+D:\travail\Xamarin\xamarin-pokemon\pokeInfo\obj\Debug\netstandard2.0\Pages\HomePage.xaml.g.cs
+D:\travail\Xamarin\xamarin-pokemon\pokeInfo\obj\Debug\netstandard2.0\Pages\AddPokemonePage.xaml.g.cs
+D:\travail\Xamarin\xamarin-pokemon\pokeInfo\obj\Debug\netstandard2.0\Pages\PokemonListPage.xaml.g.cs
+D:\travail\Xamarin\xamarin-pokemon\pokeInfo\obj\Debug\netstandard2.0\Pages\PokemonDetailPage.xaml.g.cs

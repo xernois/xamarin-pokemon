@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pokeInfo.PokemonListPage" >
+    <ContentPage.Content>
+        <StackLayout Margin="20,0,20,0">
+
+            <CollectionView ItemsSource="{Binding Items}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" SelectionMode="Single" SelectionChanged="OnCollectionViewSelectionChanged">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical"
+                                 Span="3"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <FlexLayout Direction="Column"
+                                AlignItems="Center">
+
+                            <Frame CornerRadius="5" 
+                               HorizontalOptions="Center" 
+                               HeightRequest="60" 
+                               WidthRequest="100"
+                               TranslationY="60" 
+                               HasShadow="True"
+                               BackgroundColor="{Binding TypeColor}"
+                               Padding="0">
+
+                                <StackLayout>
+                                    <Label Text="{Binding Name}"
+                                       TranslationY="30"
+                                       HorizontalTextAlignment="Center"
+                                       FontSize="18"
+                                       TextColor="White"
+                                       FontAttributes="Bold"
+                                       VerticalTextAlignment="End" 
+                                       LineBreakMode="TailTruncation"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Image Source="{Binding ImgSrc}" 
+                               HeightRequest="80" 
+                               WidthRequest="80"
+                               TranslationY="-40"/>
+                        </FlexLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
