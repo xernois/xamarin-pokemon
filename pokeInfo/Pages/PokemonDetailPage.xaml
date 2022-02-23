@@ -9,22 +9,24 @@
                 <StackLayout Orientation="Horizontal">
                     <Button Text="&lt;" Clicked="BackToList" FontSize="25" TextColor="White" FontAttributes="Bold" Padding="0" Margin="0" BackgroundColor="{Binding TypeColor}"/>
                     <Label Text="{Binding Name}" TextColor="White" FontAttributes="Bold" FontSize="Title" HorizontalOptions="FillAndExpand"  VerticalTextAlignment="Center" TextTransform="Uppercase"/>
-                    <Label Text="{Binding ID}" TextColor="White" FontAttributes="Bold" FontSize="Medium" VerticalTextAlignment="Center" Margin="0,0,25,0"/>
+                    <Label Text="{Binding ID}" TextColor="White" FontAttributes="Bold" FontSize="Default" VerticalTextAlignment="Center" Margin="0,0,25,0"/>
                 </StackLayout>
 
                 <!-- carte blanche en bas de la page-->
                 <StackLayout Background="white" Margin="7,100,7,0" VerticalOptions="FillAndExpand">
                     <Image Source="{Binding ImgSrc}" HeightRequest="150" Margin="0,-80,0,0"/>
                     <!-- Liste des types -->
-                    <FlexLayout>
-                        
+                    <FlexLayout JustifyContent="Center">
+                        <Frame BackgroundColor="{Binding TypeColor}" Padding="15,5" CornerRadius="100" HasShadow="true">
+                            <Label Text="{Binding Type}" TextColor="white" FontSize="Medium" FontAttributes="Bold"/>
+                        </Frame>
                     </FlexLayout>
                     <Label Text="A propos" HorizontalOptions="CenterAndExpand" TextColor="{Binding TypeColor}" FontAttributes="Bold" FontSize="20"/>
                     <!--Poids Taille-->
                     <FlexLayout>
                         
                     </FlexLayout>
-                    <Label Text="{Binding Description}" HorizontalTextAlignment="Center"/>
+                    <Label Text="{Binding Description}" HorizontalTextAlignment="Center" Padding="30,10"/>
                     <Label Text="Stats de base" HorizontalOptions="CenterAndExpand" TextColor="{Binding TypeColor}" FontAttributes="Bold" FontSize="20" />
 
 
@@ -46,8 +48,33 @@
 
                         <Label Text="HP" Grid.Column="0" Grid.Row="0" TextColor="{Binding TypeColor}" FontAttributes="bold" HorizontalTextAlignment="end" VerticalTextAlignment="Center"/>
                         <BoxView BackgroundColor="#E0E0E0" Grid.Column="1" Grid.Row="0" VerticalOptions="StartAndExpand"/>
-                        <Label Text="044" Grid.Column="2" Grid.Row="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121" x:Name="hp_label"/>
-                        <Slider IsEnabled="False" Minimum="0" Maximum="255" Value="44" Grid.Column="3" Grid.Row="0" MinimumTrackColor="{Binding TypeColor}" MaximumTrackColor="{Binding TypeColor}" />
+                        <Label Text="{Binding HP}" Grid.Column="2" Grid.Row="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121" />
+                        <Slider IsEnabled="False" Minimum="0" Maximum="255" Value="{Binding HP}" Grid.Column="3" Grid.Row="0" MinimumTrackColor="{Binding TypeColor}" MaximumTrackColor="{Binding TypeColor}" />
+
+                        <Label Text="ATK" Grid.Column="0" Grid.Row="1" TextColor="{Binding TypeColor}" FontAttributes="bold" HorizontalTextAlignment="end" VerticalTextAlignment="Center"/>
+                        <BoxView BackgroundColor="#E0E0E0" Grid.Column="1" Grid.Row="1" VerticalOptions="StartAndExpand"/>
+                        <Label Text="{Binding ATK}" Grid.Column="2" Grid.Row="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121"/>
+                        <Slider IsEnabled="False" Minimum="0" Maximum="255" Value="{Binding ATK}" Grid.Column="3" Grid.Row="1" MinimumTrackColor="{Binding TypeColor}" MaximumTrackColor="{Binding TypeColor}" />
+                        
+                        <Label Text="DEF" Grid.Column="0" Grid.Row="2" TextColor="{Binding TypeColor}" FontAttributes="bold" HorizontalTextAlignment="end" VerticalTextAlignment="Center"/>
+                        <BoxView BackgroundColor="#E0E0E0" Grid.Column="1" Grid.Row="2" VerticalOptions="StartAndExpand"/>
+                        <Label Text="{Binding DEF}" Grid.Column="2" Grid.Row="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121"/>
+                        <Slider IsEnabled="False" Minimum="0" Maximum="255" Value="{Binding DEF}" Grid.Column="3" Grid.Row="2" MinimumTrackColor="{Binding TypeColor}" MaximumTrackColor="{Binding TypeColor}" />
+
+                        <Label Text="SATK" Grid.Column="0" Grid.Row="3" TextColor="{Binding TypeColor}" FontAttributes="bold" HorizontalTextAlignment="end" VerticalTextAlignment="Center"/>
+                        <BoxView BackgroundColor="#E0E0E0" Grid.Column="1" Grid.Row="3" VerticalOptions="StartAndExpand"/>
+                        <Label Text="{Binding SATK}" Grid.Column="2" Grid.Row="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121"/>
+                        <Slider IsEnabled="False" Minimum="0" Maximum="255" Value="{Binding SATK}" Grid.Column="3" Grid.Row="3" MinimumTrackColor="{Binding TypeColor}" MaximumTrackColor="{Binding TypeColor}" />
+
+                        <Label Text="SDEF" Grid.Column="0" Grid.Row="4" TextColor="{Binding TypeColor}" FontAttributes="bold" HorizontalTextAlignment="end" VerticalTextAlignment="Center"/>
+                        <BoxView BackgroundColor="#E0E0E0" Grid.Column="1" Grid.Row="4" VerticalOptions="StartAndExpand"/>
+                        <Label Text="{Binding SDEF}" Grid.Column="2" Grid.Row="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121"/>
+                        <Slider IsEnabled="False" Minimum="0" Maximum="255" Value="{Binding SDEF}" Grid.Column="3" Grid.Row="4" MinimumTrackColor="{Binding TypeColor}" MaximumTrackColor="{Binding TypeColor}" />
+
+                        <Label Text="SPD" Grid.Column="0" Grid.Row="5" TextColor="{Binding TypeColor}" FontAttributes="bold" HorizontalTextAlignment="end" VerticalTextAlignment="Center"/>
+                        <BoxView BackgroundColor="#E0E0E0" Grid.Column="1" Grid.Row="5" VerticalOptions="StartAndExpand"/>
+                        <Label Text="{Binding SPD}" Grid.Column="2" Grid.Row="5" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121"/>
+                        <Slider IsEnabled="False" Minimum="0" Maximum="255" Value="{Binding SPD}" Grid.Column="3" Grid.Row="5" MinimumTrackColor="{Binding TypeColor}" MaximumTrackColor="{Binding TypeColor}" />
 
                     </Grid>
 

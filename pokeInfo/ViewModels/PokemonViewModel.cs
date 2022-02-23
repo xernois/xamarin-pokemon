@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using pokeInfo.Models;
 using System.Threading.Tasks;
 using PokeApiNet;
@@ -47,6 +46,7 @@ namespace pokeInfo.ViewModels
                     Name = pokemon.Name,
                     ImgSrc = pokemon.Sprites.FrontShiny,
                     TypeColor = Constants.TypeColor[pokemon.Types[0].Type.Name.ToLower()],
+                    Type = pokemon.Types[0].Type.Name.ToLower(),
                     Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis faucibus imperdiet leo vitae bibendum. Vestibulum fermentum nunc ac eros vulputate.",
                     HP = pokemon.Stats[0].BaseStat,
                     ATK = pokemon.Stats[1].BaseStat,
@@ -54,6 +54,8 @@ namespace pokeInfo.ViewModels
                     SATK = pokemon.Stats[3].BaseStat,
                     SDEF = pokemon.Stats[4].BaseStat,
                     SPD = pokemon.Stats[5].BaseStat,
+                    height = (pokemon.Height / 10),
+                    weight = (pokemon.Weight / 10)
                 });
             }
 

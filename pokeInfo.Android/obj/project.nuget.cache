@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xHGAp4jj2/t8tq/oJGULHNGPevAtRCSVmk6BywJUamS1aezMKCpqNgazY9BwB5dzmLt22TI2JCFQ87zwukmeQA==",
+  "dgSpecHash": "bPyVaRLjfyDys1DEdLSKpKVPyxwoaW9V58Q5rKhR33xcCM7j9ns1mdKZwN0iAqE1SuufhKE3q3GtYENc/+955w==",
   "success": true,
   "projectFilePath": "D:\\travail\\Xamarin\\xamarin-pokemon\\pokeInfo.Android\\pokeInfo.Android.csproj",
   "expectedPackageFiles": [
@@ -83,5 +83,26 @@
     "C:\\Users\\antoi\\.nuget\\packages\\xamarin.google.android.material\\1.4.0.2\\xamarin.google.android.material.1.4.0.2.nupkg.sha512",
     "C:\\Users\\antoi\\.nuget\\packages\\xamarin.google.guava.listenablefuture\\1.0.0.2\\xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Passage à une version antérieure du package détecté : Xamarin.Essentials de 1.7.1 à 1.7.0. Référencez le package directement à partir du projet pour sélectionner une version différente. \r\n pokeInfo.Android -> pokeInfo -> Xamarin.Essentials (>= 1.7.1) \r\n pokeInfo.Android -> Xamarin.Essentials (>= 1.7.0)",
+      "libraryId": "Xamarin.Essentials",
+      "targetGraphs": [
+        "MonoAndroid,Version=v12.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Passage à une version antérieure du package détecté : Xamarin.Forms de 5.0.0.2337 à 5.0.0.2196. Référencez le package directement à partir du projet pour sélectionner une version différente. \r\n pokeInfo.Android -> pokeInfo -> Xamarin.Forms (>= 5.0.0.2337) \r\n pokeInfo.Android -> Xamarin.Forms (>= 5.0.0.2196)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "MonoAndroid,Version=v12.0"
+      ]
+    }
+  ]
 }

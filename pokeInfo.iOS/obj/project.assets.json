@@ -374,8 +374,8 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "PokeApiNet": "3.0.3",
-          "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.Essentials": "1.7.1",
+          "Xamarin.Forms": "5.0.0.2337",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -759,8 +759,8 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "PokeApiNet": "3.0.3",
-          "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.Essentials": "1.7.1",
+          "Xamarin.Forms": "5.0.0.2337",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -1144,8 +1144,8 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "PokeApiNet": "3.0.3",
-          "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.Essentials": "1.7.1",
+          "Xamarin.Forms": "5.0.0.2337",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -1529,8 +1529,8 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "PokeApiNet": "3.0.3",
-          "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.Essentials": "1.7.1",
+          "Xamarin.Forms": "5.0.0.2337",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -2391,5 +2391,33 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Passage à une version antérieure du package détecté : Xamarin.Essentials de 1.7.1 à 1.7.0. Référencez le package directement à partir du projet pour sélectionner une version différente. \r\n pokeInfo.iOS -> pokeInfo -> Xamarin.Essentials (>= 1.7.1) \r\n pokeInfo.iOS -> Xamarin.Essentials (>= 1.7.0)",
+      "libraryId": "Xamarin.Essentials",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Passage à une version antérieure du package détecté : Xamarin.Forms de 5.0.0.2337 à 5.0.0.2196. Référencez le package directement à partir du projet pour sélectionner une version différente. \r\n pokeInfo.iOS -> pokeInfo -> Xamarin.Forms (>= 5.0.0.2337) \r\n pokeInfo.iOS -> Xamarin.Forms (>= 5.0.0.2196)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
 }

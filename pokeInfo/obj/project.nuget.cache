@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ad1nRDv0GXFsO6Jpr6+WTlmhFf+JQ9wf8hDpe7vs0ivB64JRMZGEXPNBkFQYj6AcalOWdOqkOs3+2y5sIUxjNQ==",
+  "dgSpecHash": "uL4qnRmPuWEZG3ekUcDGPm3PEP1lXocJc27S7CqVnfgBQi1WyC8XXB2pwFIIxAxLy/7wx9vcb0Oo+Y3dmbBReA==",
   "success": true,
   "projectFilePath": "D:\\travail\\Xamarin\\xamarin-pokemon\\pokeInfo\\pokeInfo.csproj",
   "expectedPackageFiles": [
@@ -27,8 +27,8 @@
     "C:\\Users\\antoi\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\antoi\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.0\\system.runtime.compilerservices.unsafe.4.7.0.nupkg.sha512",
     "C:\\Users\\antoi\\.nuget\\packages\\system.text.encodings.web\\4.7.2\\system.text.encodings.web.4.7.2.nupkg.sha512",
-    "C:\\Users\\antoi\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\antoi\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+    "C:\\Users\\antoi\\.nuget\\packages\\xamarin.essentials\\1.7.1\\xamarin.essentials.1.7.1.nupkg.sha512",
+    "C:\\Users\\antoi\\.nuget\\packages\\xamarin.forms\\5.0.0.2337\\xamarin.forms.5.0.0.2337.nupkg.sha512"
   ],
   "logs": []
 }
