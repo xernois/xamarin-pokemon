@@ -54,8 +54,8 @@ namespace pokeInfo.ViewModels
                     SATK = pokemon.Stats[3].BaseStat,
                     SDEF = pokemon.Stats[4].BaseStat,
                     SPD = pokemon.Stats[5].BaseStat,
-                    height = (pokemon.Height / 10),
-                    weight = (pokemon.Weight / 10)
+                    Height = (pokemon.Height / 10.0),
+                    Weight = (pokemon.Weight / 10.0)
                 });
             }
 

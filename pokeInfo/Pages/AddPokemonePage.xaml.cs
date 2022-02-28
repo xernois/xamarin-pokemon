@@ -19,6 +19,8 @@ namespace pokeInfo
             InitializeComponent();
             pokemonNum.Text = String.Empty;
             pokemonName.Text = String.Empty;
+            pokemonWeight.Text = String.Empty;
+            pokemonHeight.Text = String.Empty;
         }
 
         public void OnHpSliderValueChanged(object sender, ValueChangedEventArgs args)
@@ -104,6 +106,25 @@ namespace pokeInfo
                 pickerType.TextColor = Color.FromHex("#666666");
             }
 
+            if (pokemonWeight.Text == String.Empty)
+            {
+                frameWeight.BorderColor = Color.Red;
+                isFormValid = false;
+            }
+            else
+            {
+                frameWeight.BorderColor = Color.FromHex("#00FBC1BC");
+            }
+            if (pokemonHeight.Text == String.Empty)
+            {
+                frameHeight.BorderColor = Color.Red;
+                isFormValid = false;
+            }
+            else
+            {
+                frameHeight.BorderColor = Color.FromHex("#00FBC1BC");
+            }
+
             if (isFormValid)
             {
                 var vm = PokemonViewModel.Instance;
@@ -122,7 +143,9 @@ namespace pokeInfo
                     DEF = (int)DEFSlider.Value,
                     SATK = (int)SATKSlider.Value,
                     SDEF = (int)SDEFSlider.Value,
-                    SPD = (int)SPDSlider.Value
+                    SPD = (int)SPDSlider.Value,
+                    Weight = double.Parse(pokemonWeight.Text),
+                    Height = double.Parse(pokemonHeight.Text),
                 };
 
                 vm.addPokemon(pokemon);
@@ -144,6 +167,8 @@ namespace pokeInfo
                 satk_label.Text = "000";
                 sdef_label.Text = "000";
                 spd_label.Text = "000";
+                pokemonHeight.Text = String.Empty;
+                pokemonWeight.Text = String.Empty;
 
                 await Shell.Current.GoToAsync($"//List", true);
             } 

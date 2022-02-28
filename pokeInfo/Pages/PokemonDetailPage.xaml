@@ -21,6 +21,12 @@
                             <Label Text="{Binding Type}" TextColor="white" FontSize="Medium" FontAttributes="Bold"/>
                         </Frame>
                     </FlexLayout>
+                    <FlexLayout JustifyContent="Center">
+                        <Label Text="{Binding Weight}" FontSize="20"  />
+                        <Label Text="kilo" Margin="5,0,15,0" VerticalTextAlignment="End"/>
+                        <Label Text="{Binding Height}" FontSize="20" Margin="15,0,5,0"/>
+                        <Label Text="m" VerticalTextAlignment="End" />
+                    </FlexLayout>
                     <Label Text="A propos" HorizontalOptions="CenterAndExpand" TextColor="{Binding TypeColor}" FontAttributes="Bold" FontSize="20"/>
                     <!--Poids Taille-->
                     <FlexLayout>

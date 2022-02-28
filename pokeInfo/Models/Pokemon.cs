@@ -17,7 +17,7 @@ namespace pokeInfo.Models
         public int SATK { get; set; }
         public int SDEF { get; set; }
         public int SPD { get; set; }
-        public double weight { get; set; }
-        public double height { get; set; }
+        public double Weight { get; set; }
+        public double Height { get; set; }
     }
 }
