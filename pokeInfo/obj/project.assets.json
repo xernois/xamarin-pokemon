@@ -348,6 +348,15 @@
           "buildTransitive/Xamarin.Forms.props": {},
           "buildTransitive/Xamarin.Forms.targets": {}
         }
+      },
+      "Xamarin.MediaGallery/2.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/NativeMedia.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NativeMedia.dll": {}
+        }
       }
     }
   },
@@ -1311,6 +1320,35 @@
         "xamarin.forms.5.0.0.2337.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
+    },
+    "Xamarin.MediaGallery/2.1.1": {
+      "sha512": "obvGUO3LT8BCyNqifkwN02weNHYnh+a6GtygiJskMT/QH7GmNH04eSAvgDmo9/Do3O1VCOSFPQYcA9bBQEJpsA==",
+      "type": "package",
+      "path": "xamarin.mediagallery/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "icon.png",
+        "lib/monoandroid10.0/NativeMedia.dll",
+        "lib/monoandroid10.0/NativeMedia.xml",
+        "lib/monoandroid11.0/NativeMedia.dll",
+        "lib/monoandroid11.0/NativeMedia.xml",
+        "lib/net6.0-android31.0/NativeMedia.aar",
+        "lib/net6.0-android31.0/NativeMedia.dll",
+        "lib/net6.0-android31.0/NativeMedia.xml",
+        "lib/net6.0-ios15.0/NativeMedia.dll",
+        "lib/net6.0-ios15.0/NativeMedia.xml",
+        "lib/net6.0/NativeMedia.dll",
+        "lib/net6.0/NativeMedia.xml",
+        "lib/netstandard2.0/NativeMedia.dll",
+        "lib/netstandard2.0/NativeMedia.xml",
+        "lib/xamarinios10/NativeMedia.dll",
+        "lib/xamarinios10/NativeMedia.xml",
+        "xamarin.mediagallery.2.1.1.nupkg.sha512",
+        "xamarin.mediagallery.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -1319,23 +1357,24 @@
       "PokeApiNet >= 3.0.3",
       "Xamarin.Essentials >= 1.7.1",
       "Xamarin.Forms >= 5.0.0.2337",
+      "Xamarin.MediaGallery >= 2.1.1",
       "sqlite-net-pcl >= 1.8.116"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\grenk\\.nuget\\packages\\": {}
+    "C:\\Users\\antoi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Code\\Xamarin\\xamarin-pokemon\\pokeInfo\\pokeInfo.csproj",
+      "projectUniqueName": "D:\\travail\\Xamarin\\xamarin-pokemon\\pokeInfo\\pokeInfo.csproj",
       "projectName": "pokeInfo",
-      "projectPath": "C:\\Code\\Xamarin\\xamarin-pokemon\\pokeInfo\\pokeInfo.csproj",
-      "packagesPath": "C:\\Users\\grenk\\.nuget\\packages\\",
-      "outputPath": "C:\\Code\\Xamarin\\xamarin-pokemon\\pokeInfo\\obj\\",
+      "projectPath": "D:\\travail\\Xamarin\\xamarin-pokemon\\pokeInfo\\pokeInfo.csproj",
+      "packagesPath": "C:\\Users\\antoi\\.nuget\\packages\\",
+      "outputPath": "D:\\travail\\Xamarin\\xamarin-pokemon\\pokeInfo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\grenk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\antoi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1379,6 +1418,10 @@
             "target": "Package",
             "version": "[5.0.0.2337, )"
           },
+          "Xamarin.MediaGallery": {
+            "target": "Package",
+            "version": "[2.1.1, )"
+          },
           "sqlite-net-pcl": {
             "target": "Package",
             "version": "[1.8.116, )"
@@ -1394,7 +1437,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

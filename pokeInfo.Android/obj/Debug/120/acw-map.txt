@@ -1,6 +1,9 @@
 pokeInfo.Droid.MainActivity, pokeInfo.Android;crc647d6aa900b7eb8cf5.MainActivity
 pokeInfo.Droid.MainActivity;crc647d6aa900b7eb8cf5.MainActivity
 pokeinfo.droid.MainActivity;crc647d6aa900b7eb8cf5.MainActivity
+NativeMedia.MediaFileProvider, NativeMedia;haraba.fileProvider
+NativeMedia.MediaFileProvider;haraba.fileProvider
+haraba.fileProvider;haraba.fileProvider
 AndroidX.Activity.IOnBackPressedDispatcherOwner, Xamarin.AndroidX.Activity;androidx.activity.OnBackPressedDispatcherOwner
 AndroidX.Activity.IOnBackPressedDispatcherOwner;androidx.activity.OnBackPressedDispatcherOwner
 androidx.activity.OnBackPressedDispatcherOwner;androidx.activity.OnBackPressedDispatcherOwner

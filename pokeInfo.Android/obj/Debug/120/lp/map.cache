@@ -1,4 +1,6 @@
 FormsViewGroup.dll
+NativeMedia.dll
+NativeMedia.Permision.dll
 SQLitePCLRaw.lib.e_sqlite3.android.dll
 Xamarin.AndroidX.Activity.dll
 Xamarin.AndroidX.Annotation.dll
@@ -60,8 +62,10 @@ Xamarin.Google.Guava.ListenableFuture.dll
 androidx.versionedparcelable.versionedparcelable.aar
 androidx.arch.core.core-runtime.aar
 androidx.lifecycle.lifecycle-runtime.aar
+androidx.interpolator.interpolator.aar
 androidx.annotation.annotation-experimental.aar
 androidx.core.core.aar
+androidx.browser.browser.aar
 androidx.customview.customview.aar
 androidx.viewpager.viewpager.aar
 androidx.tracing.tracing.aar
@@ -75,7 +79,6 @@ androidx.activity.activity.aar
 androidx.fragment.fragment.aar
 androidx.viewpager2.viewpager2.aar
 androidx.vectordrawable.vectordrawable.aar
-androidx.interpolator.interpolator.aar
 androidx.vectordrawable.vectordrawable-animated.aar
 androidx.transition.transition.aar
 androidx.print.print.aar
@@ -102,4 +105,3 @@ androidx.lifecycle.lifecycle-livedata.aar
 androidx.asynclayoutinflater.asynclayoutinflater.aar
 androidx.legacy.legacy-support-core-ui.aar
 androidx.legacy.legacy-support-v4.aar
-androidx.browser.browser.aar

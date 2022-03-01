@@ -11,7 +11,10 @@
                         <Entry WidthRequest="150" x:Name="pokemonName" />
                     </Frame>
                 </FlexLayout>
-                
+                <!-- SELECTION D'IMAGE -->
+                <Button Text="Ajouter une image" Clicked="OnPickImageClick" />
+                <Image x:Name="imagePicker" />
+                <!-- SELECTION D'IMAGE -->
                 <FlexLayout Margin="0,10,0,0">
                     <Label x:Name="labelNum" Text="Numéro :" VerticalTextAlignment="Center" Margin="0,0,10,0" TextColor="#666666" FontAttributes="bold" FontSize="18"/>
                     <Frame x:Name="frameNum" BorderColor="#00FBC1BC" Padding="1">
@@ -23,12 +26,14 @@
                     <Frame x:Name="frameWeight" BorderColor="#00FBC1BC" Padding="1">
                         <Entry WidthRequest="125" Keyboard="Numeric" x:Name="pokemonWeight"/>
                     </Frame>
+                    <Label Text="Kilo Grammes" VerticalTextAlignment="center" TextColor="#666666" FontSize="18"/>
                 </FlexLayout>
                 <FlexLayout Margin="0,10,0,0">
                     <Label x:Name="labelHeight" Text="Taille :" VerticalTextAlignment="Center" Margin="0,0,10,0" TextColor="#666666" FontAttributes="bold" FontSize="18"/>
                     <Frame x:Name="frameHeight" BorderColor="#00FBC1BC" Padding="1">
-                        <Entry WidthRequest="125" Keyboard="Numeric" Placeholder="#" x:Name="pokemonHeight"/>
+                        <Entry WidthRequest="125" Keyboard="Numeric" x:Name="pokemonHeight"/>
                     </Frame>
+                    <Label Text="Métres" VerticalTextAlignment="center" TextColor="#666666" FontSize="18"/>
                 </FlexLayout>
                 
                 <FlexLayout Margin="0,10,0,0">

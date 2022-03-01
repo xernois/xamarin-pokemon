@@ -10,6 +10,8 @@ public class MonoPackageManager_Resources {
 		"Microsoft.Extensions.Logging.Abstractions.dll",
 		"Microsoft.Extensions.Options.dll",
 		"Microsoft.Extensions.Primitives.dll",
+		"NativeMedia.dll",
+		"NativeMedia.Permision.dll",
 		"Newtonsoft.Json.dll",
 		"PokeApiNet.dll",
 		"pokeInfo.dll",

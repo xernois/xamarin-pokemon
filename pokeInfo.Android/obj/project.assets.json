@@ -1769,6 +1769,37 @@
           "buildTransitive/monoandroid50/Xamarin.Google.Guava.ListenableFuture.targets": {}
         }
       },
+      "Xamarin.MediaGallery/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Essentials": "1.7.0",
+          "Xamarin.MediaGallery.Permision": "2.0.0"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid11.0/NativeMedia.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid11.0/NativeMedia.dll": {}
+        }
+      },
+      "Xamarin.MediaGallery.Permision/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Essentials": "1.7.0"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid11.0/NativeMedia.Permision.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid11.0/NativeMedia.Permision.dll": {}
+        }
+      },
       "pokeInfo/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -1776,6 +1807,7 @@
           "PokeApiNet": "3.0.3",
           "Xamarin.Essentials": "1.7.1",
           "Xamarin.Forms": "5.0.0.2337",
+          "Xamarin.MediaGallery": "2.1.1",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -3873,6 +3905,57 @@
         "xamarin.google.guava.listenablefuture.nuspec"
       ]
     },
+    "Xamarin.MediaGallery/2.1.1": {
+      "sha512": "obvGUO3LT8BCyNqifkwN02weNHYnh+a6GtygiJskMT/QH7GmNH04eSAvgDmo9/Do3O1VCOSFPQYcA9bBQEJpsA==",
+      "type": "package",
+      "path": "xamarin.mediagallery/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "icon.png",
+        "lib/monoandroid10.0/NativeMedia.dll",
+        "lib/monoandroid10.0/NativeMedia.xml",
+        "lib/monoandroid11.0/NativeMedia.dll",
+        "lib/monoandroid11.0/NativeMedia.xml",
+        "lib/net6.0-android31.0/NativeMedia.aar",
+        "lib/net6.0-android31.0/NativeMedia.dll",
+        "lib/net6.0-android31.0/NativeMedia.xml",
+        "lib/net6.0-ios15.0/NativeMedia.dll",
+        "lib/net6.0-ios15.0/NativeMedia.xml",
+        "lib/net6.0/NativeMedia.dll",
+        "lib/net6.0/NativeMedia.xml",
+        "lib/netstandard2.0/NativeMedia.dll",
+        "lib/netstandard2.0/NativeMedia.xml",
+        "lib/xamarinios10/NativeMedia.dll",
+        "lib/xamarinios10/NativeMedia.xml",
+        "xamarin.mediagallery.2.1.1.nupkg.sha512",
+        "xamarin.mediagallery.nuspec"
+      ]
+    },
+    "Xamarin.MediaGallery.Permision/2.0.0": {
+      "sha512": "XT6R+dtBkFdoZdYw3A9CuBeujv1KChcE+YVUGd/Cv14qjxvh/7dFRCWy/Hp4QHzYfuzNi7ojzxNmxOGZenElTQ==",
+      "type": "package",
+      "path": "xamarin.mediagallery.permision/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "icon.png",
+        "lib/monoandroid10.0/NativeMedia.Permision.dll",
+        "lib/monoandroid10.0/NativeMedia.Permision.xml",
+        "lib/monoandroid11.0/NativeMedia.Permision.dll",
+        "lib/monoandroid11.0/NativeMedia.Permision.xml",
+        "lib/netstandard2.0/NativeMedia.Permision.dll",
+        "lib/netstandard2.0/NativeMedia.Permision.xml",
+        "lib/xamarinios10/NativeMedia.Permision.dll",
+        "lib/xamarinios10/NativeMedia.Permision.xml",
+        "xamarin.mediagallery.permision.2.0.0.nupkg.sha512",
+        "xamarin.mediagallery.permision.nuspec"
+      ]
+    },
     "pokeInfo/1.0.0": {
       "type": "project",
       "path": "../pokeInfo/pokeInfo.csproj",
@@ -3883,24 +3966,25 @@
     "MonoAndroid,Version=v12.0": [
       "Xamarin.Essentials >= 1.7.0",
       "Xamarin.Forms >= 5.0.0.2196",
+      "Xamarin.MediaGallery >= 2.1.1",
       "pokeInfo >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\grenk\\.nuget\\packages\\": {}
+    "C:\\Users\\antoi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Code\\Xamarin\\xamarin-pokemon\\pokeInfo.Android\\pokeInfo.Android.csproj",
+      "projectUniqueName": "D:\\travail\\Xamarin\\xamarin-pokemon\\pokeInfo.Android\\pokeInfo.Android.csproj",
       "projectName": "pokeInfo.Android",
-      "projectPath": "C:\\Code\\Xamarin\\xamarin-pokemon\\pokeInfo.Android\\pokeInfo.Android.csproj",
-      "packagesPath": "C:\\Users\\grenk\\.nuget\\packages\\",
-      "outputPath": "C:\\Code\\Xamarin\\xamarin-pokemon\\pokeInfo.Android\\obj\\",
+      "projectPath": "D:\\travail\\Xamarin\\xamarin-pokemon\\pokeInfo.Android\\pokeInfo.Android.csproj",
+      "packagesPath": "C:\\Users\\antoi\\.nuget\\packages\\",
+      "outputPath": "D:\\travail\\Xamarin\\xamarin-pokemon\\pokeInfo.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\grenk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\antoi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3913,8 +3997,8 @@
       "frameworks": {
         "monoandroid12.0": {
           "projectReferences": {
-            "C:\\Code\\Xamarin\\xamarin-pokemon\\pokeInfo\\pokeInfo.csproj": {
-              "projectPath": "C:\\Code\\Xamarin\\xamarin-pokemon\\pokeInfo\\pokeInfo.csproj"
+            "D:\\travail\\Xamarin\\xamarin-pokemon\\pokeInfo\\pokeInfo.csproj": {
+              "projectPath": "D:\\travail\\Xamarin\\xamarin-pokemon\\pokeInfo\\pokeInfo.csproj"
             }
           }
         }
@@ -3930,6 +4014,10 @@
           "Xamarin.Forms": {
             "target": "Package",
             "version": "[5.0.0.2196, )"
+          },
+          "Xamarin.MediaGallery": {
+            "target": "Package",
+            "version": "[2.1.1, )"
           }
         }
       }

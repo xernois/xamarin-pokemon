@@ -8,6 +8,7 @@ using pokeInfo.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using pokeInfo.Models;
+using NativeMedia;
 
 namespace pokeInfo
 {
@@ -23,6 +24,29 @@ namespace pokeInfo
             pokemonHeight.Text = String.Empty;
         }
 
+        private async void OnPickImageClick(object sender, EventArgs args)
+        {
+            var results = await MediaGallery.PickAsync(1, MediaFileType.Image);
+
+            if (results?.Files == null)
+            {
+                return;
+            }
+
+                var imageName = results.Files.First().NameWithoutExtension;
+                var ext = results.Files.First().Extension;
+                var contentType = results.Files.First().ContentType;
+
+
+                imagePicker.Source = ImageSource.FromStream(() => {
+                    var stream = Task.Run(() => results.Files?.First().OpenReadAsync()).Result;
+                    
+                    return stream;
+                });
+
+
+                await DisplayAlert(imageName, $"Extension: {ext}, content-type: {contentType}", "OK");
+        }
         public void OnHpSliderValueChanged(object sender, ValueChangedEventArgs args)
         {
             int value = (int)args.NewValue;

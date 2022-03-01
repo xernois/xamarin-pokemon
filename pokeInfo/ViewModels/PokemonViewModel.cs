@@ -80,7 +80,6 @@ namespace pokeInfo.ViewModels
             PokemonDatabase pokemonDB = await PokemonDatabase.Instance;
             if (pokemonDB.isPokemonDatabaseEmptyAsync().Result == true)
             {
-                Console.WriteLine("------------- bd Vide -------------");
                 this.fillPokemonDatabase();
             }
             else

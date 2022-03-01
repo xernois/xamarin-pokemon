@@ -5574,10 +5574,11 @@ int styleable ViewTransition_upDuration 13
 int styleable ViewTransition_viewTransitionMode 14
 int[] styleable include { 0x7f0300eb }
 int styleable include_constraintSet 0
-int xml image_share_filepaths 0x7f110000
-int xml standalone_badge 0x7f110001
-int xml standalone_badge_gravity_bottom_end 0x7f110002
-int xml standalone_badge_gravity_bottom_start 0x7f110003
-int xml standalone_badge_gravity_top_start 0x7f110004
-int xml standalone_badge_offset 0x7f110005
-int xml xamarin_essentials_fileprovider_file_paths 0x7f110006
+int xml file_provider_paths 0x7f110000
+int xml image_share_filepaths 0x7f110001
+int xml standalone_badge 0x7f110002
+int xml standalone_badge_gravity_bottom_end 0x7f110003
+int xml standalone_badge_gravity_bottom_start 0x7f110004
+int xml standalone_badge_gravity_top_start 0x7f110005
+int xml standalone_badge_offset 0x7f110006
+int xml xamarin_essentials_fileprovider_file_paths 0x7f110007

@@ -13,6 +13,7 @@
           "PokeApiNet": "3.0.3",
           "Xamarin.Essentials": "1.7.1",
           "Xamarin.Forms": "5.0.0.2337",
+          "Xamarin.MediaGallery": "2.1.1",
           "sqlite-net-pcl": "1.8.116"
         },
         "runtime": {
@@ -263,6 +264,14 @@
             "fileVersion": "5.0.0.884"
           }
         }
+      },
+      "Xamarin.MediaGallery/2.1.1": {
+        "runtime": {
+          "lib/netstandard2.0/NativeMedia.dll": {
+            "assemblyVersion": "2.1.1.0",
+            "fileVersion": "2.1.1.0"
+          }
+        }
       }
     }
   },
@@ -446,6 +455,13 @@
       "sha512": "sha512-2AYl2V1YHjEDEmA5d+aP382ielCKr8d/jo3zCgPSvLE/4Pw/em7pHBGmN3yZ/WzxIMV16f7wBfoFCHesMud0AA==",
       "path": "xamarin.forms/5.0.0.2337",
       "hashPath": "xamarin.forms.5.0.0.2337.nupkg.sha512"
+    },
+    "Xamarin.MediaGallery/2.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-obvGUO3LT8BCyNqifkwN02weNHYnh+a6GtygiJskMT/QH7GmNH04eSAvgDmo9/Do3O1VCOSFPQYcA9bBQEJpsA==",
+      "path": "xamarin.mediagallery/2.1.1",
+      "hashPath": "xamarin.mediagallery.2.1.1.nupkg.sha512"
     }
   }
 }
