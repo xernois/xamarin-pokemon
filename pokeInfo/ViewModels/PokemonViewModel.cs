@@ -11,14 +11,13 @@ namespace pokeInfo.ViewModels
     public class PokemonViewModel : BaseViewModel
     {
 
-        //private Dictionary<string, object> properties = new Dictionary<string, object>(); // dictionnaire pour faire correspondre les valeurs contenu dans la page d'ajout
-
         public ObservableCollection<Pokemon> Items
         {
             get { return GetValue<ObservableCollection<Pokemon>>(); }
             set { SetValue(value); }
         }
 
+        public List<Pokemon> PokemonsList;
 
         private static PokemonViewModel _instance = new PokemonViewModel();
         public static PokemonViewModel Instance { get { return _instance; } }
@@ -28,7 +27,24 @@ namespace pokeInfo.ViewModels
             Items.Add(pokemon);
         }
 
-
+        public void fillPokemonList(List<Pokemon> list)
+        {
+            Items.Clear();
+            foreach (Pokemon pokemon in list)
+            {
+                Items.Add(pokemon);
+            }
+        }
+        public async void fillPokemonList()
+        {
+            Items.Clear();
+            PokemonDatabase pokemonDB = await PokemonDatabase.Instance;
+            PokemonsList = pokemonDB.GetPokemonsAsync().Result;
+            foreach (Pokemon pokemon in PokemonsList)
+            {
+                Items.Add(pokemon);
+            }
+        }
         public async void fillPokemonDatabase()
         {
             PokeApiClient pokeClient = new PokeApiClient();
@@ -63,17 +79,6 @@ namespace pokeInfo.ViewModels
             }
 
             this.fillPokemonList();
-        }
-
-        public async void fillPokemonList()
-        {
-            PokemonDatabase pokemonDB = await PokemonDatabase.Instance;
-            List<Pokemon> pokemonList = pokemonDB.GetPokemonsAsync().Result;
-
-            foreach (Pokemon pokemon in pokemonList)
-            {
-                Items.Add(pokemon);
-            }
         }
 
         public async void init()

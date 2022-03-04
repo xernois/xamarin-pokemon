@@ -1,45 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="pokeInfo.PokemonListPage" >
+<ContentPage
+    x:Class="pokeInfo.PokemonListPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <ContentPage.Content>
         <StackLayout Margin="20,0,20,0">
-
-            <CollectionView ItemsSource="{Binding Items}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" SelectionMode="Single" SelectionChanged="OnCollectionViewSelectionChanged">
+            <SearchBar TextChanged="onTextChange" />
+            <CollectionView
+                HorizontalOptions="FillAndExpand"
+                ItemsSource="{Binding Items}"
+                SelectionChanged="OnCollectionViewSelectionChanged"
+                SelectionMode="Single"
+                VerticalOptions="FillAndExpand">
                 <CollectionView.ItemsLayout>
-                    <GridItemsLayout Orientation="Vertical"
-                                 Span="3"/>
+                    <GridItemsLayout Orientation="Vertical" Span="3" />
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <FlexLayout Direction="Column"
-                                AlignItems="Center">
+                        <FlexLayout AlignItems="Center" Direction="Column">
 
-                            <Frame CornerRadius="5" 
-                               HorizontalOptions="Center" 
-                               HeightRequest="60" 
-                               WidthRequest="100"
-                               TranslationY="60" 
-                               HasShadow="True"
-                               BackgroundColor="{Binding TypeColor}"
-                               Padding="0">
+                            <Frame
+                                Padding="0"
+                                BackgroundColor="{Binding TypeColor}"
+                                CornerRadius="5"
+                                HasShadow="True"
+                                HeightRequest="60"
+                                HorizontalOptions="Center"
+                                TranslationY="60"
+                                WidthRequest="100">
 
                                 <StackLayout>
-                                    <Label Text="{Binding Name}"
-                                       TranslationY="30"
-                                       HorizontalTextAlignment="Center"
-                                       FontSize="18"
-                                       TextColor="White"
-                                       FontAttributes="Bold"
-                                       VerticalTextAlignment="End" 
-                                       LineBreakMode="TailTruncation"/>
+                                    <Label
+                                        FontAttributes="Bold"
+                                        FontSize="18"
+                                        HorizontalTextAlignment="Center"
+                                        LineBreakMode="TailTruncation"
+                                        Text="{Binding Name}"
+                                        TextColor="White"
+                                        TranslationY="30"
+                                        VerticalTextAlignment="End" />
                                 </StackLayout>
                             </Frame>
 
-                            <Image Source="{Binding ImgSrc}" 
-                               HeightRequest="80" 
-                               WidthRequest="80"
-                               TranslationY="-40"/>
+                            <Image
+                                HeightRequest="80"
+                                Source="{Binding ImgSrc}"
+                                TranslationY="-40"
+                                WidthRequest="80" />
                         </FlexLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

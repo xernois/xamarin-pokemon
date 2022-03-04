@@ -23,13 +23,21 @@ namespace pokeInfo
         async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Pokemon current = (e.CurrentSelection.FirstOrDefault() as Pokemon);
-            if(current == null)
+            if (current == null)
             {
                 return;
             }
             (sender as CollectionView).SelectedItem = null;
             await Navigation.PushAsync(new PokemonDetailPage(current));
         }
-    }
 
+        void onTextChange(object sender, TextChangedEventArgs e)
+        {
+            SearchBar searchBar = (SearchBar)sender;
+
+            PokemonViewModel.Instance.fillPokemonList(PokemonViewModel.Instance.PokemonsList.ToList().Where(pokemon => pokemon.Name.ToUpper().Contains(e.NewTextValue.ToUpper())).ToList());
+        }
+       
+    }
+    
 }
