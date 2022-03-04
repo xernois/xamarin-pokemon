@@ -1,6 +1,8 @@
 FormsViewGroup.dll
 NativeMedia.dll
 NativeMedia.Permision.dll
+PCLStorage.dll
+Plugin.Media.dll
 SQLitePCLRaw.lib.e_sqlite3.android.dll
 Xamarin.AndroidX.Activity.dll
 Xamarin.AndroidX.Annotation.dll

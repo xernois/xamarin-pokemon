@@ -12,8 +12,9 @@
                     </Frame>
                 </FlexLayout>
                 <!-- SELECTION D'IMAGE -->
-                <Button Text="Ajouter une image" Clicked="OnPickImageClick" />
-                <Image x:Name="imagePicker" />
+                <StackLayout>
+                    <ImageButton x:Name="imagePicker" Source="globeNav.png" Clicked="OnPickImageClick" HorizontalOptions="End" HeightRequest="100" WidthRequest="100" MinimumHeightRequest="100" MinimumWidthRequest="100"/>
+                </StackLayout>
                 <!-- SELECTION D'IMAGE -->
                 <FlexLayout Margin="0,10,0,0">
                     <Label x:Name="labelNum" Text="Numéro :" VerticalTextAlignment="Center" Margin="0,0,10,0" TextColor="#666666" FontAttributes="bold" FontSize="18"/>

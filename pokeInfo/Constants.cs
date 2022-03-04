@@ -8,26 +8,26 @@ namespace pokeInfo
     public static class Constants
     {
 
-        public static readonly Dictionary<string, string> TypeColor = new Dictionary<string, string>
+        public static readonly Dictionary<string, (string, string)> TypeInfos = new Dictionary<string, (string, string)>
         {
-            {"rock", "#B69E31" },
-            {"ghost", "#70559B"},
-            {"steel", "#B7B9D0"},
-            {"water", "#6493EB"},
-            {"grass", "#74CB48"},
-            {"psychic", "#FB5584"},
-            {"ice", "#9AD6DF"},
-            {"dark", "#75574C"},
-            {"fairy", "#E69EAC"},
-            {"normal", "#AAA67F"},
-            {"fighting", "#C12239"},
-            {"flying", "#A891EC"},
-            {"poison", "#A43E9E"},
-            {"ground", "#DEC16B"},
-            {"bug", "#A7B723"},
-            {"fire", "#F57D31"},
-            {"electric", "#F9CF30"},
-            {"dragon", "#7037FF"}
+            {"rock", ("#B69E31", "Roche") },
+            {"ghost", ("#70559B", "Fantome")},
+            {"steel", ("#B7B9D0", "Acier")},
+            {"water", ("#6493EB", "Eau")},
+            {"grass", ("#74CB48", "Herbe" )},
+            {"psychic", ("#FB5584", "Psy")},
+            {"ice", ("#9AD6DF", "Glace")},
+            {"dark", ("#75574C", "Ténèbres")},
+            {"fairy", ("#E69EAC", "Fée")},
+            {"normal", ("#AAA67F", "Normal")},
+            {"fighting", ("#C12239", "Combat")},
+            {"flying", ("#A891EC", "Vol")},
+            {"poison", ("#A43E9E", "Poison")},
+            {"ground", ("#DEC16B", "Sol")},
+            {"bug", ("#A7B723", "Insecte")},
+            {"fire", ("#F57D31", "Feu")},
+            {"electric", ("#F9CF30", "Electric")},
+            {"dragon", ("#7037FF", "Dragon")}
         };
 
         public const string DatabaseFilename = "PokemonSQLite.db3";

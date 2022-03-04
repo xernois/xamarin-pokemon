@@ -17,6 +17,12 @@ namespace pokeInfo.Pages
         {
             InitializeComponent();
             BindingContext = pokemon;
+
+            if (pokemon.Type2 == null)
+            {
+                    secondType.IsVisible = false;
+            }
+
         }
         public void BackToList(object sender, EventArgs args)
         {

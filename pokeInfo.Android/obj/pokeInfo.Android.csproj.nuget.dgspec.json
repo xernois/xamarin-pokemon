@@ -96,9 +96,17 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
+            "PCLStorage": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
             "PokeApiNet": {
               "target": "Package",
               "version": "[3.0.3, )"
+            },
+            "Xam.Plugin.Media": {
+              "target": "Package",
+              "version": "[5.0.1, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

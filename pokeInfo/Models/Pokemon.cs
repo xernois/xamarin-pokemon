@@ -10,6 +10,8 @@ namespace pokeInfo.Models
         public string ImgSrc { get; set; }
         public string TypeColor { get; set; }
         public string Type { get; set; }
+        public string Type2Color { get; set; }
+        public string Type2 { get; set; }
         public string Description { get; set; }
         public int HP { get; set; }
         public int ATK { get; set; }

@@ -52,12 +52,6 @@ namespace pokeInfo {
             return Database.Table<Pokemon>().ToListAsync();
         }
 
-        /*public Task<List<Pokemon>> GetItemsNotDoneAsync()
-        {
-            // SQL queries are also possible
-            return Database.QueryAsync<TodoItem>("SELECT * FROM [TodoItem] WHERE [Done] = 0");
-        }*/
-
         public Task<Pokemon> GetPokemonByIdAsync(int id)
         {
             return Database.Table<Pokemon>().Where(i => i.ID == id).FirstOrDefaultAsync();

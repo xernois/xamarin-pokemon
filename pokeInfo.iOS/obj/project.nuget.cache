@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "//mqP2inPDocP1qQs/X8b5bgPTHYXkeGNhaZPqWLb3IMMQqPOc/D40dqniZxLwgB1TzU/VVKylmIMZnhsZXnYg==",
+  "dgSpecHash": "tyDq6kuH6iAA2QZLYFR7RitLFiwYq4CAY5OUlrg8HvlSkARLbAgbTSmktfMSV5E1muTHja/SpEKAjsL7EnIWlg==",
   "success": true,
   "projectFilePath": "D:\\travail\\Xamarin\\xamarin-pokemon\\pokeInfo.iOS\\pokeInfo.iOS.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\antoi\\.nuget\\packages\\microsoft.extensions.options\\3.1.0\\microsoft.extensions.options.3.1.0.nupkg.sha512",
     "C:\\Users\\antoi\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.0\\microsoft.extensions.primitives.3.1.0.nupkg.sha512",
     "C:\\Users\\antoi\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\antoi\\.nuget\\packages\\pclstorage\\1.0.2\\pclstorage.1.0.2.nupkg.sha512",
     "C:\\Users\\antoi\\.nuget\\packages\\pokeapinet\\3.0.3\\pokeapinet.3.0.3.nupkg.sha512",
     "C:\\Users\\antoi\\.nuget\\packages\\sqlite-net-pcl\\1.8.116\\sqlite-net-pcl.1.8.116.nupkg.sha512",
     "C:\\Users\\antoi\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.4\\sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",
@@ -24,6 +25,7 @@
     "C:\\Users\\antoi\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\antoi\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.0\\system.runtime.compilerservices.unsafe.4.7.0.nupkg.sha512",
     "C:\\Users\\antoi\\.nuget\\packages\\system.text.encodings.web\\4.7.2\\system.text.encodings.web.4.7.2.nupkg.sha512",
+    "C:\\Users\\antoi\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
     "C:\\Users\\antoi\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
     "C:\\Users\\antoi\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512",
     "C:\\Users\\antoi\\.nuget\\packages\\xamarin.mediagallery\\2.1.1\\xamarin.mediagallery.2.1.1.nupkg.sha512",

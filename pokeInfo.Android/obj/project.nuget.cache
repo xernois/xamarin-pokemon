@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/3gzS3vKrFxPFVSNCKFf1xQ06O4WEPynYmXxPwYUePRNN46XE1EWvd9VfxEpWi7XbQ9mZDoN9gbqUwOhxN1yzg==",
+  "dgSpecHash": "iyBMkseKp6QvLAqHK5Xg8aMLt7PKVQxRRCzzjkBS79sYKxk1Ip020V285hj1jdqDo+znCEOrNOEtuUFihTNqcA==",
   "success": true,
   "projectFilePath": "D:\\travail\\Xamarin\\xamarin-pokemon\\pokeInfo.Android\\pokeInfo.Android.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\antoi\\.nuget\\packages\\microsoft.extensions.options\\3.1.0\\microsoft.extensions.options.3.1.0.nupkg.sha512",
     "C:\\Users\\antoi\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.0\\microsoft.extensions.primitives.3.1.0.nupkg.sha512",
     "C:\\Users\\antoi\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\antoi\\.nuget\\packages\\pclstorage\\1.0.2\\pclstorage.1.0.2.nupkg.sha512",
     "C:\\Users\\antoi\\.nuget\\packages\\pokeapinet\\3.0.3\\pokeapinet.3.0.3.nupkg.sha512",
     "C:\\Users\\antoi\\.nuget\\packages\\sqlite-net-pcl\\1.8.116\\sqlite-net-pcl.1.8.116.nupkg.sha512",
     "C:\\Users\\antoi\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.4\\sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",
@@ -25,6 +26,7 @@
     "C:\\Users\\antoi\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\antoi\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.0\\system.runtime.compilerservices.unsafe.4.7.0.nupkg.sha512",
     "C:\\Users\\antoi\\.nuget\\packages\\system.text.encodings.web\\4.7.2\\system.text.encodings.web.4.7.2.nupkg.sha512",
+    "C:\\Users\\antoi\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
     "C:\\Users\\antoi\\.nuget\\packages\\xamarin.androidx.activity\\1.2.4.1\\xamarin.androidx.activity.1.2.4.1.nupkg.sha512",
     "C:\\Users\\antoi\\.nuget\\packages\\xamarin.androidx.annotation\\1.2.0.1\\xamarin.androidx.annotation.1.2.0.1.nupkg.sha512",
     "C:\\Users\\antoi\\.nuget\\packages\\xamarin.androidx.annotation.experimental\\1.1.0.1\\xamarin.androidx.annotation.experimental.1.1.0.1.nupkg.sha512",

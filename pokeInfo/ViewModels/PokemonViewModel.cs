@@ -39,15 +39,18 @@ namespace pokeInfo.ViewModels
             for (int i = 1; i <= 10; i++)
             {
                 PokeApiNet.Pokemon pokemon = await Task.Run(() => pokeClient.GetResourceAsync<PokeApiNet.Pokemon>(random.Next(1, 722)));
+                PokeApiNet.PokemonSpecies species = Task.Run(() => pokeClient.GetResourceAsync(pokemon.Species)).Result;
 
                 await pokemonDB.AddPokemonAsync(new Pokemon
                 {
                     ID = pokemon.Id,
-                    Name = pokemon.Name,
+                    Name = species.Names.Find(name => name.Language.Name.Equals("fr")).Name,
                     ImgSrc = pokemon.Sprites.FrontShiny,
-                    TypeColor = Constants.TypeColor[pokemon.Types[0].Type.Name.ToLower()],
-                    Type = pokemon.Types[0].Type.Name.ToLower(),
-                    Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis faucibus imperdiet leo vitae bibendum. Vestibulum fermentum nunc ac eros vulputate.",
+                    TypeColor = Constants.TypeInfos[pokemon.Types[0].Type.Name.ToLower()].Item1,
+                    Type =  Constants.TypeInfos[pokemon.Types[0].Type.Name.ToLower()].Item2,
+                    Type2Color = pokemon.Types.Count >= 2 ? Constants.TypeInfos[pokemon.Types[1].Type.Name.ToLower()].Item1 : "#000",
+                    Type2 = pokemon.Types.Count >= 2 ? Constants.TypeInfos[pokemon.Types[1].Type.Name.ToLower()].Item2 : null,
+                    Description = species.FlavorTextEntries.FindLast(flavor => flavor.Language.Name.Equals("fr")).FlavorText.Replace("\n", " "),
                     HP = pokemon.Stats[0].BaseStat,
                     ATK = pokemon.Stats[1].BaseStat,
                     DEF = pokemon.Stats[2].BaseStat,
@@ -58,8 +61,6 @@ namespace pokeInfo.ViewModels
                     Weight = (pokemon.Weight / 10.0)
                 });
             }
-
-            
 
             this.fillPokemonList();
         }
@@ -86,17 +87,12 @@ namespace pokeInfo.ViewModels
             {
                 this.fillPokemonList();
             }
-
-
-
         }
 
         public PokemonViewModel()
         {
-
             Items = new ObservableCollection<Pokemon>();
             this.init();
-
         }
     }
 }

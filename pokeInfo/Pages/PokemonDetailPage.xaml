@@ -16,9 +16,12 @@
                 <StackLayout Background="white" Margin="7,100,7,0" VerticalOptions="FillAndExpand">
                     <Image Source="{Binding ImgSrc}" HeightRequest="150" Margin="0,-80,0,0"/>
                     <!-- Liste des types -->
-                    <FlexLayout JustifyContent="Center">
-                        <Frame BackgroundColor="{Binding TypeColor}" Padding="15,5" CornerRadius="100" HasShadow="true">
+                    <FlexLayout Direction="Row" JustifyContent="center">
+                        <Frame BackgroundColor="{Binding TypeColor}" Padding="15,5" CornerRadius="100" HasShadow="true" Margin="10">
                             <Label Text="{Binding Type}" TextColor="white" FontSize="Medium" FontAttributes="Bold"/>
+                        </Frame>
+                        <Frame x:Name="secondType" BackgroundColor="{Binding Type2Color}" Padding="15,5" CornerRadius="100" HasShadow="true" Margin="10">
+                            <Label Text="{Binding Type2}" TextColor="white" FontSize="Medium" FontAttributes="Bold"/>
                         </Frame>
                     </FlexLayout>
                     <FlexLayout JustifyContent="Center">

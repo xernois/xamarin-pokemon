@@ -1,20 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PokeApiNet;
-using pokeInfo.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using pokeInfo.Models;
-using NativeMedia;
+using Plugin.Media;
+using Plugin.Media.Abstractions;
+using pokeInfo.ViewModels;
 
 namespace pokeInfo
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddPokemonePage : ContentPage
     {
+
+        private MediaFile Image { get; set; }
         public AddPokemonePage()
         {
             InitializeComponent();
@@ -26,26 +23,19 @@ namespace pokeInfo
 
         private async void OnPickImageClick(object sender, EventArgs args)
         {
-            var results = await MediaGallery.PickAsync(1, MediaFileType.Image);
 
-            if (results?.Files == null)
+            this.Image = await CrossMedia.Current.PickPhotoAsync();
+
+            if (this.Image == null)
             {
                 return;
             }
 
-                var imageName = results.Files.First().NameWithoutExtension;
-                var ext = results.Files.First().Extension;
-                var contentType = results.Files.First().ContentType;
+            imagePicker.Source = ImageSource.FromStream(() =>
+            {
+                return this.Image.GetStream();
+            });
 
-
-                imagePicker.Source = ImageSource.FromStream(() => {
-                    var stream = Task.Run(() => results.Files?.First().OpenReadAsync()).Result;
-                    
-                    return stream;
-                });
-
-
-                await DisplayAlert(imageName, $"Extension: {ext}, content-type: {contentType}", "OK");
         }
         public void OnHpSliderValueChanged(object sender, ValueChangedEventArgs args)
         {
@@ -158,8 +148,8 @@ namespace pokeInfo
                 {
                     Name = pokemonName.Text,
                     ID = Int32.Parse(pokemonNum.Text),
-                    ImgSrc = "",
-                    TypeColor = Constants.TypeColor[pickerType.SelectedItem.ToString().ToLower()],
+                    ImgSrc = this.Image.Path,
+                    TypeColor = Constants.TypeInfos[pickerType.SelectedItem.ToString().ToLower()].Item1,
                     Type = pickerType.SelectedItem.ToString().ToLower(),
                     Description = description.Text,
                     HP = (int)HPSlider.Value,
@@ -174,7 +164,8 @@ namespace pokeInfo
 
                 vm.addPokemon(pokemon);
                 await pokemonDB.AddPokemonAsync(pokemon);
-                
+
+                imagePicker.Source = "";
                 pokemonName.Text = String.Empty;
                 pokemonNum.Text = String.Empty;
                 pickerType.SelectedItem = null;
@@ -195,7 +186,7 @@ namespace pokeInfo
                 pokemonWeight.Text = String.Empty;
 
                 await Shell.Current.GoToAsync($"//List", true);
-            } 
+            }
         }
     }
 }
