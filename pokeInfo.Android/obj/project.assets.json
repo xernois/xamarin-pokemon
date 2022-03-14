@@ -4087,24 +4087,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Antoine\\.nuget\\packages\\": {},
+    "C:\\Users\\grenk\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dev\\xamarin-pokemon\\pokeInfo.Android\\pokeInfo.Android.csproj",
+      "projectUniqueName": "C:\\code\\Xamarin\\xamarin-pokemon\\pokeInfo.Android\\pokeInfo.Android.csproj",
       "projectName": "pokeInfo.Android",
-      "projectPath": "D:\\Dev\\xamarin-pokemon\\pokeInfo.Android\\pokeInfo.Android.csproj",
-      "packagesPath": "C:\\Users\\Antoine\\.nuget\\packages\\",
-      "outputPath": "D:\\Dev\\xamarin-pokemon\\pokeInfo.Android\\obj\\",
+      "projectPath": "C:\\code\\Xamarin\\xamarin-pokemon\\pokeInfo.Android\\pokeInfo.Android.csproj",
+      "packagesPath": "C:\\Users\\grenk\\.nuget\\packages\\",
+      "outputPath": "C:\\code\\Xamarin\\xamarin-pokemon\\pokeInfo.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Antoine\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\grenk\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -4118,8 +4118,8 @@
       "frameworks": {
         "monoandroid12.0": {
           "projectReferences": {
-            "D:\\Dev\\xamarin-pokemon\\pokeInfo\\pokeInfo.csproj": {
-              "projectPath": "D:\\Dev\\xamarin-pokemon\\pokeInfo\\pokeInfo.csproj"
+            "C:\\code\\Xamarin\\xamarin-pokemon\\pokeInfo\\pokeInfo.csproj": {
+              "projectPath": "C:\\code\\Xamarin\\xamarin-pokemon\\pokeInfo\\pokeInfo.csproj"
             }
           }
         }
