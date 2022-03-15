@@ -8,7 +8,7 @@
                 <StackLayout Margin="0,10,0,0" Orientation="Horizontal">
                     <Label x:Name="labelName" Text="Nom :" VerticalTextAlignment="Center" Margin="0,0,10,0" TextColor="#666666" FontAttributes="bold" FontSize="18"/>
                     <Frame x:Name="frameName" BorderColor="#E0E0E0" Padding="1" VerticalOptions="Center" CornerRadius="5">
-                        <Entry  x:Name="pokemonName" WidthRequest="300" />
+                        <Entry  x:Name="pokemonName" WidthRequest="280" />
                     </Frame>
                 </StackLayout>
                 
@@ -17,20 +17,20 @@
                         <StackLayout Orientation="Horizontal">
                             <Label x:Name="labelNum" Text="Numéro :" VerticalTextAlignment="Center" Margin="0,0,5,0" TextColor="#666666" FontAttributes="bold" FontSize="18"/>
                             <Frame x:Name="frameNum" BorderColor="#E0E0E0" Padding="1" CornerRadius="5">
-                                <Entry WidthRequest="125" Keyboard="Numeric" Placeholder="#" x:Name="pokemonNum"/>
+                                <Entry WidthRequest="100" Keyboard="Numeric" Placeholder="#" x:Name="pokemonNum"/>
                             </Frame>
                         </StackLayout>
                         <StackLayout  Orientation="Horizontal">
                             <Label x:Name="labelWeight" Text="Poids :" VerticalTextAlignment="Center" Margin="0,0,5,0" TextColor="#666666" FontAttributes="bold" FontSize="18"/>
                             <Frame  x:Name="frameWeight" BorderColor="#E0E0E0" Padding="1" CornerRadius="5" Margin="18,0,0,0">
-                                <Entry WidthRequest="95" Keyboard="Numeric" x:Name="pokemonWeight"/>
+                                <Entry WidthRequest="75" Keyboard="Numeric" x:Name="pokemonWeight"/>
                             </Frame>
                             <Label Text="Kg" VerticalTextAlignment="center" TextColor="#666666" FontSize="18"/>
                         </StackLayout>
                         <StackLayout Orientation="Horizontal">
                             <Label x:Name="labelHeight" Text="Taille :" VerticalTextAlignment="Center" Margin="0,0,5,0" TextColor="#666666" FontAttributes="bold" FontSize="18"/>
                             <Frame x:Name="frameHeight" BorderColor="#E0E0E0" Padding="1" CornerRadius="5" Margin="22,0,0,0" IsTabStop="False">
-                                <Entry WidthRequest="95" Keyboard="Numeric" x:Name="pokemonHeight"/>
+                                <Entry WidthRequest="80" Keyboard="Numeric" x:Name="pokemonHeight"/>
                             </Frame>
                             <Label Text="m" VerticalTextAlignment="center" TextColor="#666666" FontSize="18"/>
                         </StackLayout>
@@ -46,7 +46,7 @@
                 
                 
                 <FlexLayout Margin="0,10,0,0">
-                    <Label Text="Type :" VerticalTextAlignment="Center" Margin="0,0,10,0" FontAttributes="bold" FontSize="18"/>
+                    <Label Text="Type :" TextColor="#666666" VerticalTextAlignment="Center" Margin="0,0,10,0" FontAttributes="bold" FontSize="18"/>
                     <Picker Title="Ajouter" TextColor="#666666" x:Name="pickerType">
                         <Picker.Items>
                             <x:String>Normal</x:String>
@@ -79,7 +79,7 @@
                 </StackLayout>
                 
                 <StackLayout>
-                    <Label Text="Stats :" TextColor="#666666" FontAttributes="bold" FontSize="25"/>
+                    <Label Text="Stats :" TextColor="#666666" FontAttributes="bold" FontSize="18"/>
                     <Grid RowSpacing="0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="auto" />
@@ -129,17 +129,18 @@
                     </Grid>
                 </StackLayout>
 
-                <Button Text="Ajouter"
-                        WidthRequest="126"
-                        TextColor="#FFF"
-                        BackgroundColor="#FF1C1C"
-                        FontAttributes="Bold"
-                        HorizontalOptions="Center"
-                        FontSize="20"
-                        BorderRadius="7"
-                        Margin="0,20,0,20"    
-                        Clicked="OnButtonClicked"
-                    />
+                <Frame BackgroundColor="LightGray" CornerRadius="8" HasShadow="True" Padding="0.8" Margin="0,20,0,20" HorizontalOptions="Center">
+                    <Button Text="Ajouter"
+                            TextColor="#FFF"
+                            BackgroundColor="#FF1C1C"
+                            FontAttributes="Bold"
+                            FontSize="20"  
+                            CornerRadius="7"
+                            WidthRequest="126"
+                            Clicked="OnButtonClicked"
+                        />
+                </Frame>
+                
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
