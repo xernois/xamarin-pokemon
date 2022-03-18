@@ -22,6 +22,19 @@ namespace pokeInfo.ViewModels
         private static PokemonViewModel _instance = new PokemonViewModel();
         public static PokemonViewModel Instance { get { return _instance; } }
         
+
+        public async void deletePokemon(Pokemon pokemon)
+        {
+            PokemonDatabase pokemonDB = await PokemonDatabase.Instance;
+            await pokemonDB.DeletePokemonAsync(pokemon);
+            PokemonsList = PokemonsList.FindAll(poke => poke.ID != pokemon.ID);
+            Items.Clear();
+            foreach(var poke in PokemonsList)
+            {
+                Items.Add(poke);
+            }
+        }
+
         public void addPokemon(Pokemon pokemon)
         {
             Items.Add(pokemon);

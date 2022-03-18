@@ -317,8 +317,31 @@
 
 
 
+                <FlexLayout JustifyContent="SpaceEvenly" Direction="Row" Padding="20,20,20,40">
+                        <Frame CornerRadius="8" HasShadow="True" Padding="0" >
+                            <Button Text="Supprimer"
+                            TextColor="#FFF"
+                            BackgroundColor="{Binding TypeColor}"
+                            FontAttributes="Bold"
+                            FontSize="15"  
+                            CornerRadius="7"
+                            WidthRequest="120"
+                            Clicked="supprimerPokemon"
+                        />
+                    </Frame>
+                    <Frame CornerRadius="8" HasShadow="True" Padding="0" >
+                        <Button Text="Modifier"
+                            TextColor="#FFF"
+                            BackgroundColor="{Binding TypeColor}"
+                            FontAttributes="Bold"
+                            FontSize="15"  
+                            CornerRadius="7"
+                            WidthRequest="100"
+                            Clicked="modifierPokemon"
+                        />
+                    </Frame>
+                </FlexLayout>
                 </StackLayout>
-
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

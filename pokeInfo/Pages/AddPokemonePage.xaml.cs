@@ -4,6 +4,7 @@ using Xamarin.Forms.Xaml;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
 using pokeInfo.ViewModels;
+using pokeInfo.Models;
 
 namespace pokeInfo
 {
@@ -12,8 +13,19 @@ namespace pokeInfo
     {
 
         private MediaFile Image { get; set; }
+        private bool IsEdit = false;
         public AddPokemonePage()
         {
+            InitializeComponent();
+            pokemonNum.Text = String.Empty;
+            pokemonName.Text = String.Empty;
+            pokemonWeight.Text = String.Empty;
+            pokemonHeight.Text = String.Empty;
+        }
+
+        public AddPokemonePage(Pokemon pokemon)
+        {
+            IsEdit = true;
             InitializeComponent();
             pokemonNum.Text = String.Empty;
             pokemonName.Text = String.Empty;

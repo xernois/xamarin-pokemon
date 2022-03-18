@@ -1,10 +1,13 @@
 ﻿using pokeInfo.Models;
+using SQLite;
 using System.Collections.Generic;
 
 namespace pokeInfo.Models
 {
     public class Pokemon
     {
+
+        [PrimaryKey]
         public int ID { get; set; }
         public string Name { get; set; }
         public string ImgSrc { get; set; }

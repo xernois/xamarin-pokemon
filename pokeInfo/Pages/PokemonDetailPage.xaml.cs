@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using pokeInfo.Models;
+using pokeInfo.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,8 +14,14 @@ namespace pokeInfo.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PokemonDetailPage : ContentPage
     {
-        public PokemonDetailPage(Pokemon pokemon)
+
+        Pokemon pokemon;
+
+        public PokemonDetailPage(Pokemon poke)
         {
+
+            pokemon = poke;
+
             InitializeComponent();
             BindingContext = pokemon;
 
@@ -24,9 +31,24 @@ namespace pokeInfo.Pages
             }
 
         }
-        public void BackToList(object sender, EventArgs args)
+        public async void BackToList(object sender, EventArgs args)
         {
+
+            await DisplayActionSheet("title", "cancel", "destruction", "test1", "test2");
+
             Navigation.PopAsync();
         }
+
+        public void supprimerPokemon(object sender, EventArgs args)
+        {
+            Navigation.PopAsync();
+            PokemonViewModel.Instance.deletePokemon(pokemon);
+        }
+
+        public void modifierPokemon(object sender, EventArgs args)
+        {
+            Navigation.PushAsync(new AddPokemonePage(pokemon));
+        }
+
     }
 }

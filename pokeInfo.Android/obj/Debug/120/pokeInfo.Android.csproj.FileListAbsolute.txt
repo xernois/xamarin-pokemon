@@ -2649,3 +2649,4 @@ C:\code\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\android\assets\Sy
 C:\code\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\android\src\crc646957603ea1820544\MediaPickerActivity.java
 C:\code\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\android\src\haraba\fileProvider.java
 C:\code\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\res\drawable\image.png
+D:\travail\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\res\drawable\image.png
