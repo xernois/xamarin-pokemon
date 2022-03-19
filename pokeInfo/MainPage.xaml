@@ -8,7 +8,7 @@
        >
 
     <TabBar  x:Name="main_tab_bar" TabIndex="1" FlyoutDisplayOptions="AsSingleItem" FlyoutItemIsVisible="True">
-        <ShellContent Route="List" x:Name="main_tab_bar_list" Title="List" Icon="globeNav.png" >
+        <ShellContent Route="List" x:Name="main_tab_bar_list" Title="List" Icon="globeNav.png">
             <pokeInfo:PokemonListPage/>
         </ShellContent>
 

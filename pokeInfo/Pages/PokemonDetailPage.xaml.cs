@@ -16,7 +16,7 @@ namespace pokeInfo.Pages
     {
 
         Pokemon pokemon;
-
+        private bool IsEdit = false;
         public PokemonDetailPage(Pokemon poke)
         {
 
@@ -30,6 +30,24 @@ namespace pokeInfo.Pages
                     secondType.IsVisible = false;
             }
 
+        }
+
+        protected override void OnDisappearing()
+        {
+            if (!IsEdit)
+            {
+
+            base.OnDisappearing();
+            Console.WriteLine("test");
+            Navigation.PopAsync();
+            Console.WriteLine("test2");
+            }
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            IsEdit = false;
         }
         public async void BackToList(object sender, EventArgs args)
         {
@@ -45,6 +63,7 @@ namespace pokeInfo.Pages
 
         public void modifierPokemon(object sender, EventArgs args)
         {
+            IsEdit = true;
             Navigation.PushAsync(new AddPokemonePage(pokemon));
         }
 

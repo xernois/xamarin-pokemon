@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Plugin.Media;
+using Plugin.Media.Abstractions;
+using pokeInfo.Models;
+using pokeInfo.ViewModels;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Plugin.Media;
-using Plugin.Media.Abstractions;
-using pokeInfo.ViewModels;
-using pokeInfo.Models;
 
 namespace pokeInfo
 {
@@ -15,7 +15,7 @@ namespace pokeInfo
         private MediaFile Image { get; set; }
         private bool IsEdit = false;
 
-        private Pokemon currentPokemon; 
+        private Pokemon currentPokemon;
 
         // constructeur de la page
         public AddPokemonePage()
@@ -30,6 +30,7 @@ namespace pokeInfo
             IsEdit = true;
             InitializeComponent();
             boutonValidation.Text = "Modifier";
+            pokemonNum.IsEnabled = false;
             this.currentPokemon = pokemon;
             this.setPokemon(pokemon);
         }
@@ -47,11 +48,11 @@ namespace pokeInfo
 
 
         private async void OnPickImageClick(object sender, EventArgs args)
-        { 
+        {
             this.Image = await CrossMedia.Current.PickPhotoAsync();
 
             if (this.Image == null) return;
-            
+
             imagePicker.Source = ImageSource.FromStream(() => this.Image.GetStream());
         }
 
@@ -66,7 +67,7 @@ namespace pokeInfo
                 frameName.BorderColor = Color.Red;
                 isFormValid = false;
             }
-            else { frameName.BorderColor = Color.FromHex("#00FBC1BC");}
+            else { frameName.BorderColor = Color.FromHex("#00FBC1BC"); }
 
             if (pokemonNum.Text == String.Empty)
             {
@@ -98,14 +99,15 @@ namespace pokeInfo
 
             return isFormValid;
         }
-       
+
 
         private async void onCancel(object obj, EventArgs e)
         {
             if (IsEdit)
             {
                 await Navigation.PopAsync();
-            }else
+            }
+            else
             {
                 this.clearInputs();
             }
@@ -113,10 +115,11 @@ namespace pokeInfo
 
         private void setPokemon(Pokemon pokemon)
         {
-            imagePicker.Source = pokemon.ImgSrc ;
+            imagePicker.Source = pokemon.ImgSrc;
             pokemonName.Text = pokemon.Name;
-            pokemonNum.Text = ""+pokemon.ID;
+            pokemonNum.Text = "" + pokemon.ID;
             pickerType.SelectedIndex = pickerType.Items.IndexOf(pokemon.Type);
+            pickerType2.SelectedIndex = pickerType2.Items.IndexOf(pokemon.Type2);
             description.Text = pokemon.Description;
             HPSlider.Value = pokemon.HP;
             ATKSlider.Value = pokemon.ATK;
@@ -124,8 +127,8 @@ namespace pokeInfo
             SATKSlider.Value = pokemon.SATK;
             SDEFSlider.Value = pokemon.SDEF;
             SPDSlider.Value = pokemon.SPD;
-            pokemonHeight.Text = ""+pokemon.Height;
-            pokemonWeight.Text = ""+pokemon.Weight;
+            pokemonHeight.Text = "" + pokemon.Height;
+            pokemonWeight.Text = "" + pokemon.Weight;
         }
 
         private void clearInputs()
@@ -134,6 +137,7 @@ namespace pokeInfo
             pokemonName.Text = String.Empty;
             pokemonNum.Text = String.Empty;
             pickerType.SelectedItem = null;
+            pickerType2.SelectedItem = null;
             description.Text = String.Empty;
             HPSlider.Value = 0;
             ATKSlider.Value = 0;
@@ -151,59 +155,88 @@ namespace pokeInfo
             pickerType2.SelectedItem = null;
         }
 
-       
+
+        private string getTypeKeyFromValue(string value)
+        {
+            if (value == null) return "normal";
+
+            foreach (var typeinfo in Constants.TypeInfos)
+            {
+                if (typeinfo.Value.Item2.ToLower() == value.ToLower())
+                {
+                    return typeinfo.Key;
+                }
+            }
+
+            return "normal";
+        }
+
 
         public async void OnButtonClicked(object sender, EventArgs args)
         {
             if (IsFormValid())
             {
+                Models.Pokemon pokemon = new Models.Pokemon();
+                pokemon.Name = pokemonName.Text;
+                pokemon.ID = Int32.Parse(pokemonNum.Text);
+                pokemon.ImgSrc = this.Image == null ? currentPokemon.ImgSrc : this.Image.Path;
 
-                string type = "";
+                pokemon.Type = pickerType.SelectedItem != null ? pickerType.SelectedItem.ToString() :
+                        pickerType2.SelectedItem != null ? pickerType.SelectedItem.ToString() : null;
+                pokemon.TypeColor = Constants.TypeInfos[getTypeKeyFromValue(pokemon.Type)].Item1;
 
-                foreach (var typeinfo in Constants.TypeInfos)
-                {
-                    if (typeinfo.Value.Item2.ToLower() == pickerType.SelectedItem.ToString().ToLower())
-                    {
-                        type = typeinfo.Key;
-                    }
-                }
+                pokemon.Type2 = pickerType.SelectedItem != null && pickerType2.SelectedItem != null ? pickerType2.SelectedItem.ToString() : null;
+                pokemon.Type2Color = Constants.TypeInfos[getTypeKeyFromValue(pokemon.Type2)].Item1;
 
-                Models.Pokemon pokemon = new Models.Pokemon
-                {
-                    Name = pokemonName.Text,
-                    ID = Int32.Parse(pokemonNum.Text),
-                    ImgSrc = this.Image == null ? currentPokemon.ImgSrc : this.Image.Path, 
-                    TypeColor = Constants.TypeInfos[type].Item1,
-                    Type = pickerType.SelectedItem.ToString(),
-                    Description = description.Text,
-                    HP = (int)HPSlider.Value,
-                    ATK = (int)ATKSlider.Value,
-                    DEF = (int)DEFSlider.Value,
-                    SATK = (int)SATKSlider.Value,
-                    SDEF = (int)SDEFSlider.Value,
-                    SPD = (int)SPDSlider.Value,
-                    Weight = double.Parse(pokemonWeight.Text),
-                    Height = double.Parse(pokemonHeight.Text),
-                };
+                pokemon.Description = description.Text;
+                pokemon.HP = (int)HPSlider.Value;
+                pokemon.ATK = (int)ATKSlider.Value;
+                pokemon.DEF = (int)DEFSlider.Value;
+                pokemon.SATK = (int)SATKSlider.Value;
+                pokemon.SDEF = (int)SDEFSlider.Value;
+                pokemon.SPD = (int)SPDSlider.Value;
+                pokemon.Weight = double.Parse(pokemonWeight.Text);
+                pokemon.Height = double.Parse(pokemonHeight.Text);
 
                 var vm = PokemonViewModel.Instance;
                 PokemonDatabase pokemonDB = await PokemonDatabase.Instance;
 
-                vm.addPokemonToBase(pokemon);
+                
 
                 if (IsEdit)
                 {
-                    Console.WriteLine("mes couilles sur ton front");
                     vm.replacePokemonInList(pokemon);
+                    await Navigation.PopAsync();
                 }
                 else
                 {
-                    vm.addPokemonToList(pokemon);
+
+                    if (vm.PokemonsList.FindIndex(poke => poke.ID == pokemon.ID) != -1)
+                    {
+                        var result = await DisplayAlert("Attention", "Un pokemon avec le meme identifiant existe deja, voulez vous l'ecrabouiller ?", "Oui, ☠️", "Non, 😇");
+                        Console.WriteLine(result);
+                        if (result)
+                        {
+                            this.clearInputs();
+                            vm.replacePokemonInList(pokemon);
+                            await Shell.Current.GoToAsync($"//List", true);
+                        }
+                        else
+                        {
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        this.clearInputs();
+                        vm.addPokemonToList(pokemon);
+                        await Shell.Current.GoToAsync($"//List", true);
+                    }
                 }
 
-                this.clearInputs();
-                await Shell.Current.GoToAsync($"//List", true);
-                }
+                vm.addPokemonToBase(pokemon);
             }
         }
     }
+}
+

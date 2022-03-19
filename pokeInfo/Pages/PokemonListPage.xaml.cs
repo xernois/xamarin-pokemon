@@ -19,6 +19,13 @@ namespace pokeInfo
             InitializeComponent();
             BindingContext = PokemonViewModel.Instance;
         }
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            Console.WriteLine("test");
+            Navigation.PopAsync();
+            Console.WriteLine("test2");
+        }
 
         async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
         {

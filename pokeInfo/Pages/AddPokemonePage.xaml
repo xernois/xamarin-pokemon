@@ -73,23 +73,23 @@
                     <Picker Title="Ajouter" TextColor="#666666" x:Name="pickerType2">
                         <Picker.Items>
                             <x:String>Normal</x:String>
-                            <x:String>Fight</x:String>
-                            <x:String>Flying</x:String>
+                            <x:String>Combat</x:String>
+                            <x:String>Vol</x:String>
                             <x:String>Poison</x:String>
-                            <x:String>Ground</x:String>
-                            <x:String>Rock</x:String>
-                            <x:String>Bug</x:String>
-                            <x:String>Ghost</x:String>
-                            <x:String>Steel</x:String>
-                            <x:String>Fire</x:String>
-                            <x:String>Water</x:String>
-                            <x:String>Grass</x:String>
+                            <x:String>Sol</x:String>
+                            <x:String>Roche</x:String>
+                            <x:String>Insecte</x:String>
+                            <x:String>Fantome</x:String>
+                            <x:String>Acier</x:String>
+                            <x:String>Feu</x:String>
+                            <x:String>Eau</x:String>
+                            <x:String>Herbe</x:String>
                             <x:String>Electric</x:String>
-                            <x:String>Psychic</x:String>
-                            <x:String>Ice</x:String>
+                            <x:String>Psy</x:String>
+                            <x:String>Glace</x:String>
                             <x:String>Dragon</x:String>
-                            <x:String>Dark</x:String>
-                            <x:String>Fairy</x:String>
+                            <x:String>Ténèbres</x:String>
+                            <x:String>Fée</x:String>
                         </Picker.Items>
                     </Picker>
                     <Button Text="🗑️" Background="#0000" Padding="10, 5 ,0 ,0" Margin="0" WidthRequest="25" VerticalOptions="Center" Clicked="clearTypes" />
