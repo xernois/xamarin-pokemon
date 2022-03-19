@@ -5,49 +5,72 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Margin="20,20,20,0">
-                <StackLayout Margin="0,10,0,0" Orientation="Horizontal">
+
+
+                <!-- SELECTION D'IMAGE -->
+                <StackLayout Margin="10,0,0,0" HorizontalOptions="Center" Orientation="Horizontal"  >
+                    <ImageButton x:Name="imagePicker" Source="image.png" Clicked="OnPickImageClick" HeightRequest="150" WidthRequest="150"/>
+                </StackLayout>
+                <!-- SELECTION D'IMAGE -->
+
+                <StackLayout>
+                    <!-- NOM -->
                     <Label x:Name="labelName" Text="Nom :" VerticalTextAlignment="Center" Margin="0,0,10,0" TextColor="#666666" FontAttributes="bold" FontSize="18"/>
                     <Frame x:Name="frameName" BorderColor="#E0E0E0" Padding="1" VerticalOptions="Center" CornerRadius="5">
                         <Entry  x:Name="pokemonName" WidthRequest="280" />
                     </Frame>
-                </StackLayout>
-                
-                <FlexLayout Direction="Row" Margin="0,20,0,0">
-                    <StackLayout>
-                        <StackLayout Orientation="Horizontal">
-                            <Label x:Name="labelNum" Text="Numéro :" VerticalTextAlignment="Center" Margin="0,0,5,0" TextColor="#666666" FontAttributes="bold" FontSize="18"/>
-                            <Frame x:Name="frameNum" BorderColor="#E0E0E0" Padding="1" CornerRadius="5">
-                                <Entry WidthRequest="100" Keyboard="Numeric" Placeholder="#" x:Name="pokemonNum"/>
-                            </Frame>
-                        </StackLayout>
-                        <StackLayout  Orientation="Horizontal">
-                            <Label x:Name="labelWeight" Text="Poids :" VerticalTextAlignment="Center" Margin="0,0,5,0" TextColor="#666666" FontAttributes="bold" FontSize="18"/>
-                            <Frame  x:Name="frameWeight" BorderColor="#E0E0E0" Padding="1" CornerRadius="5" Margin="18,0,0,0">
-                                <Entry WidthRequest="75" Keyboard="Numeric" x:Name="pokemonWeight"/>
-                            </Frame>
-                            <Label Text="Kg" VerticalTextAlignment="center" TextColor="#666666" FontSize="18"/>
-                        </StackLayout>
-                        <StackLayout Orientation="Horizontal">
-                            <Label x:Name="labelHeight" Text="Taille :" VerticalTextAlignment="Center" Margin="0,0,5,0" TextColor="#666666" FontAttributes="bold" FontSize="18"/>
-                            <Frame x:Name="frameHeight" BorderColor="#E0E0E0" Padding="1" CornerRadius="5" Margin="22,0,0,0" IsTabStop="False">
-                                <Entry WidthRequest="80" Keyboard="Numeric" x:Name="pokemonHeight"/>
-                            </Frame>
-                            <Label Text="m" VerticalTextAlignment="center" TextColor="#666666" FontSize="18"/>
-                        </StackLayout>
-                    </StackLayout>
+                    <!-- NUMERO -->
+                    <Label x:Name="labelNum" Text="Numéro :" VerticalTextAlignment="Center" Margin="0,0,5,0" TextColor="#666666" FontAttributes="bold" FontSize="18"/>
+                    <Frame x:Name="frameNum" BorderColor="#E0E0E0" Padding="1" CornerRadius="5">
+                        <Entry WidthRequest="100" Keyboard="Numeric" Placeholder="#" x:Name="pokemonNum"/>
+                    </Frame>
+                    <!-- POIDS -->
+                    <Label x:Name="labelWeight" Text="Poids :" VerticalTextAlignment="Center" Margin="0,0,5,0" TextColor="#666666" FontAttributes="bold" FontSize="18"/>
 
-                    <!-- SELECTION D'IMAGE -->
-                    <StackLayout Margin="10,0,0,0" HorizontalOptions="Center" Orientation="Horizontal"  >
-                        <ImageButton x:Name="imagePicker" Source="image.png" Clicked="OnPickImageClick" HeightRequest="150" WidthRequest="150"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Frame  x:Name="frameWeight" BorderColor="#E0E0E0" Padding="1"  CornerRadius="5" HorizontalOptions="FillAndExpand" >
+                            <Entry HorizontalOptions="Fill" Keyboard="Numeric" x:Name="pokemonWeight"/>
+                        </Frame>
+                        <Label Text="Kg" VerticalTextAlignment="center" TextColor="#666666" FontSize="18"/>
                     </StackLayout>
-                    <!-- SELECTION D'IMAGE -->
-                </FlexLayout>
+                    <!-- TAILLE -->
+                    <Label x:Name="labelHeight" Text="Taille :" VerticalTextAlignment="Center" Margin="0,0,5,0" TextColor="#666666" FontAttributes="bold" FontSize="18"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Frame x:Name="frameHeight" BorderColor="#E0E0E0" Padding="1" CornerRadius="5" HorizontalOptions="FillAndExpand">
+                            <Entry WidthRequest="80" Keyboard="Numeric" x:Name="pokemonHeight"/>
+                        </Frame>
+                        <Label Text="m" VerticalTextAlignment="center" TextColor="#666666" FontSize="18"/>
+                    </StackLayout>
+                </StackLayout>
+
                 
                 
                 
                 <FlexLayout Margin="0,10,0,0">
                     <Label Text="Type :" TextColor="#666666" VerticalTextAlignment="Center" Margin="0,0,10,0" FontAttributes="bold" FontSize="18"/>
                     <Picker Title="Ajouter" TextColor="#666666" x:Name="pickerType">
+                        <Picker.Items>
+                            <x:String>Normal</x:String>
+                            <x:String>Combat</x:String>
+                            <x:String>Vol</x:String>
+                            <x:String>Poison</x:String>
+                            <x:String>Sol</x:String>
+                            <x:String>Roche</x:String>
+                            <x:String>Insecte</x:String>
+                            <x:String>Fantome</x:String>
+                            <x:String>Acier</x:String>
+                            <x:String>Feu</x:String>
+                            <x:String>Eau</x:String>
+                            <x:String>Herbe</x:String>
+                            <x:String>Electric</x:String>
+                            <x:String>Psy</x:String>
+                            <x:String>Glace</x:String>
+                            <x:String>Dragon</x:String>
+                            <x:String>Ténèbres</x:String>
+                            <x:String>Fée</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Picker Title="Ajouter" TextColor="#666666" x:Name="pickerType2">
                         <Picker.Items>
                             <x:String>Normal</x:String>
                             <x:String>Fight</x:String>
@@ -69,6 +92,7 @@
                             <x:String>Fairy</x:String>
                         </Picker.Items>
                     </Picker>
+                    <Button Text="🗑️" Background="#0000" Padding="10, 5 ,0 ,0" Margin="0" WidthRequest="25" VerticalOptions="Center" Clicked="clearTypes" />
                 </FlexLayout>
                 
                 <StackLayout Margin="0,20,0,0">
@@ -98,39 +122,44 @@
 
                         <Label Text="HP" Grid.Column="0" Grid.Row="0" TextColor="#FF1C1C" FontAttributes="bold" HorizontalTextAlignment="end" VerticalTextAlignment="Center"/>
                         <BoxView BackgroundColor="#E0E0E0" Grid.Column="1" Grid.Row="0" VerticalOptions="StartAndExpand"/>
-                        <Label Text="000" Grid.Column="2" Grid.Row="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121" x:Name="hp_label"/>
-                        <Slider x:Name="HPSlider" Minimum="0" Maximum="255" Grid.Column="3" Grid.Row="0" MinimumTrackColor="#FF1C1C" MaximumTrackColor="#FF1C1C" ThumbColor="red" ValueChanged="OnHpSliderValueChanged"/>
+                        <Label WidthRequest="30"  Text="{Binding Source={x:Reference HPSlider},Path=Value, StringFormat='{0:F0}'}" Grid.Column="2" Grid.Row="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121" x:Name="hp_label"/>
+                        <Slider x:Name="HPSlider" Minimum="0" Maximum="255" Grid.Column="3" Grid.Row="0" MinimumTrackColor="#FF1C1C" MaximumTrackColor="#FF1C1C" ThumbColor="red"/>
 
                         <Label Text="ATK" Grid.Column="0" Grid.Row="1" TextColor="#FF1C1C" FontAttributes="bold" HorizontalTextAlignment="end" VerticalTextAlignment="Center"/>
                         <BoxView BackgroundColor="#E0E0E0" Grid.Column="1" Grid.Row="1"/>
-                        <Label Text="000" Grid.Column="2" Grid.Row="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121" x:Name="atk_label"/>
-                        <Slider x:Name="ATKSlider" Minimum="0" Maximum="255" Grid.Column="3" Grid.Row="1" MinimumTrackColor="#FF1C1C" MaximumTrackColor="#FF1C1C" ThumbColor="red" ValueChanged="OnAtkSliderValueChanged"/>
+                        <Label   WidthRequest="30" Text="{Binding Source={x:Reference ATKSlider},Path=Value, StringFormat='{0:F0}'}" Grid.Column="2" Grid.Row="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121" x:Name="atk_label"/>
+                        <Slider x:Name="ATKSlider" Minimum="0" Maximum="255" Grid.Column="3" Grid.Row="1" MinimumTrackColor="#FF1C1C" MaximumTrackColor="#FF1C1C" ThumbColor="red"/>
 
                         <Label Text="DEF" Grid.Column="0" Grid.Row="2" TextColor="#FF1C1C" FontAttributes="bold" HorizontalTextAlignment="end" VerticalTextAlignment="Center"/>
                         <BoxView BackgroundColor="#E0E0E0" Grid.Column="1" Grid.Row="2"/>
-                        <Label Text="000" Grid.Column="2" Grid.Row="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121" x:Name="def_label"/>
-                        <Slider x:Name="DEFSlider" Minimum="0" Maximum="255" Grid.Column="3" Grid.Row="2" MinimumTrackColor="#FF1C1C" MaximumTrackColor="#FF1C1C" ThumbColor="red" ValueChanged="OnDefSliderValueChanged"/>
+                        <Label  WidthRequest="30" Text="{Binding Source={x:Reference DEFSlider},Path=Value, StringFormat='{0:F0}'}" Grid.Column="2" Grid.Row="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121" x:Name="def_label"/>
+                        <Slider x:Name="DEFSlider" Minimum="0" Maximum="255" Grid.Column="3" Grid.Row="2" MinimumTrackColor="#FF1C1C" MaximumTrackColor="#FF1C1C" ThumbColor="red"/>
 
                         <Label Text="SATK" Grid.Column="0" Grid.Row="3" TextColor="#FF1C1C" FontAttributes="bold" HorizontalTextAlignment="end" VerticalTextAlignment="Center"/>
                         <BoxView BackgroundColor="#E0E0E0" Grid.Column="1" Grid.Row="3"/>
-                        <Label Text="000" Grid.Column="2" Grid.Row="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121" x:Name="satk_label"/>
-                        <Slider x:Name="SATKSlider" Minimum="0" Maximum="255" Grid.Column="3" Grid.Row="3" MinimumTrackColor="#FF1C1C" MaximumTrackColor="#FF1C1C" ThumbColor="red" ValueChanged="OnSatkSliderValueChanged"/>
+                        <Label  WidthRequest="30" Text="{Binding Source={x:Reference SATKSlider},Path=Value, StringFormat='{0:F0}'}" Grid.Column="2" Grid.Row="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121" x:Name="satk_label"/>
+                        <Slider x:Name="SATKSlider" Minimum="0" Maximum="255" Grid.Column="3" Grid.Row="3" MinimumTrackColor="#FF1C1C" MaximumTrackColor="#FF1C1C" ThumbColor="red"/>
 
                         <Label Text="SDEF" Grid.Column="0" Grid.Row="4" TextColor="#FF1C1C" FontAttributes="bold" HorizontalTextAlignment="end" VerticalTextAlignment="Center"/>
                         <BoxView BackgroundColor="#E0E0E0" Grid.Column="1" Grid.Row="4"/>
-                        <Label Text="000" Grid.Column="2" Grid.Row="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121" x:Name="sdef_label"/>
-                        <Slider x:Name="SDEFSlider" Minimum="0" Maximum="255" Grid.Column="3" Grid.Row="4" MinimumTrackColor="#FF1C1C" MaximumTrackColor="#FF1C1C" ThumbColor="red" ValueChanged="OnSdefSliderValueChanged"/>
+                        <Label WidthRequest="30"  Text="{Binding Source={x:Reference SDEFSlider},Path=Value, StringFormat='{0:F0}'}" Grid.Column="2" Grid.Row="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121" x:Name="sdef_label"/>
+                        <Slider x:Name="SDEFSlider" Minimum="0" Maximum="255" Grid.Column="3" Grid.Row="4" MinimumTrackColor="#FF1C1C" MaximumTrackColor="#FF1C1C" ThumbColor="red"/>
 
                         <Label Text="SPD" Grid.Column="0" Grid.Row="5" TextColor="#FF1C1C" FontAttributes="bold" HorizontalTextAlignment="end" VerticalTextAlignment="Center"/>
                         <BoxView BackgroundColor="#E0E0E0" Grid.Column="1" Grid.Row="5"/>
-                        <Label Text="000" Grid.Column="2" Grid.Row="5" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121" x:Name="spd_label"/>
-                        <Slider x:Name="SPDSlider" Minimum="0" Maximum="255" Grid.Column="3" Grid.Row="5" MinimumTrackColor="#FF1C1C" MaximumTrackColor="#FF1C1C" ThumbColor="red" ValueChanged="OnSpdSliderValueChanged"/>
+                        <Label WidthRequest="30"  Text="{Binding Source={x:Reference SPDSlider},Path=Value, StringFormat='{0:F0}'}" Grid.Column="2" Grid.Row="5" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#212121" x:Name="spd_label"/>
+                        <Slider x:Name="SPDSlider" Minimum="0" Maximum="255" Grid.Column="3" Grid.Row="5" MinimumTrackColor="#FF1C1C" MaximumTrackColor="#FF1C1C" ThumbColor="red"/>
 
                     </Grid>
                 </StackLayout>
 
-                <Frame BackgroundColor="LightGray" CornerRadius="8" HasShadow="True" Padding="0.8" Margin="0,20,0,20" HorizontalOptions="Center">
-                    <Button Text="Ajouter"
+
+
+
+
+                <FlexLayout JustifyContent="SpaceEvenly" Direction="Row" Padding="20,20,20,40">
+                    <Frame CornerRadius="8" HasShadow="True" Padding="0" >
+                        <Button Text="Ajouter"
                             TextColor="#FFF"
                             BackgroundColor="#FF1C1C"
                             FontAttributes="Bold"
@@ -138,9 +167,21 @@
                             CornerRadius="7"
                             WidthRequest="126"
                             Clicked="OnButtonClicked"
+                            x:Name="boutonValidation"
                         />
-                </Frame>
-                
+                    </Frame>
+                    <Frame CornerRadius="8" HasShadow="True" Padding="0" >
+                        <Button Text="Annuler"
+                            TextColor="#FFF"
+                            BackgroundColor="#FF1C1C"
+                            FontAttributes="Bold"
+                            FontSize="20"  
+                            CornerRadius="7"
+                            WidthRequest="126"
+                            Clicked="onCancel"
+                        />
+                    </Frame>
+                </FlexLayout>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

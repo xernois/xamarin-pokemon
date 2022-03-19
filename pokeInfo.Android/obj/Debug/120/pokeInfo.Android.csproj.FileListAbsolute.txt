@@ -2650,3 +2650,13 @@ C:\code\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\android\src\crc64
 C:\code\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\android\src\haraba\fileProvider.java
 C:\code\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\res\drawable\image.png
 D:\travail\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\res\drawable\image.png
+D:\travail\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\res\mipmap-xxxhdpi\icon_adaptive_back.png
+D:\travail\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\res\mipmap-xxxhdpi\icon_adaptive_fore.png
+D:\travail\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\res\mipmap-xxhdpi\icon_adaptive_back.png
+D:\travail\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\res\mipmap-xxhdpi\icon_adaptive_fore.png
+D:\travail\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\res\mipmap-xhdpi\icon_adaptive_back.png
+D:\travail\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\res\mipmap-xhdpi\icon_adaptive_fore.png
+D:\travail\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\res\mipmap-mdpi\icon_adaptive_back.png
+D:\travail\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\res\mipmap-mdpi\icon_adaptive_fore.png
+D:\travail\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\res\mipmap-hdpi\icon_adaptive_back.png
+D:\travail\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\res\mipmap-hdpi\icon_adaptive_fore.png

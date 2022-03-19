@@ -14,92 +14,51 @@ namespace pokeInfo
 
         private MediaFile Image { get; set; }
         private bool IsEdit = false;
+
+        private Pokemon currentPokemon; 
+
+        // constructeur de la page
         public AddPokemonePage()
         {
             InitializeComponent();
-            pokemonNum.Text = String.Empty;
-            pokemonName.Text = String.Empty;
-            pokemonWeight.Text = String.Empty;
-            pokemonHeight.Text = String.Empty;
-        }
+            this.clearInputs();
+            this.currentPokemon = new Pokemon();
 
+        }
         public AddPokemonePage(Pokemon pokemon)
         {
             IsEdit = true;
             InitializeComponent();
-            pokemonNum.Text = String.Empty;
-            pokemonName.Text = String.Empty;
-            pokemonWeight.Text = String.Empty;
-            pokemonHeight.Text = String.Empty;
+            boutonValidation.Text = "Modifier";
+            this.currentPokemon = pokemon;
+            this.setPokemon(pokemon);
         }
+
+
+
+
+
+
+
+
+
+
+
+
 
         private async void OnPickImageClick(object sender, EventArgs args)
-        {
-
+        { 
             this.Image = await CrossMedia.Current.PickPhotoAsync();
 
-            if (this.Image == null)
-            {
-                return;
-            }
-
-            imagePicker.Source = ImageSource.FromStream(() =>
-            {
-                return this.Image.GetStream();
-            });
-
-        }
-        public void OnHpSliderValueChanged(object sender, ValueChangedEventArgs args)
-        {
-            int value = (int)args.NewValue;
-            Slider slider = (Slider)sender;
-            String str = "00" + value.ToString();
-            hp_label.Text = str.Substring(str.Length - 3);
+            if (this.Image == null) return;
+            
+            imagePicker.Source = ImageSource.FromStream(() => this.Image.GetStream());
         }
 
-        public void OnAtkSliderValueChanged(object sender, ValueChangedEventArgs args)
-        {
-            int value = (int)args.NewValue;
-            Slider slider = (Slider)sender;
-            String str = "00" + value.ToString();
-            atk_label.Text = str.Substring(str.Length - 3);
-        }
 
-        public void OnDefSliderValueChanged(object sender, ValueChangedEventArgs args)
+        //Méthode qui vérifie si le formulaire est valide
+        private bool IsFormValid()
         {
-            int value = (int)args.NewValue;
-            Slider slider = (Slider)sender;
-            String str = "00" + value.ToString();
-            def_label.Text = str.Substring(str.Length - 3);
-        }
-
-        public void OnSatkSliderValueChanged(object sender, ValueChangedEventArgs args)
-        {
-            int value = (int)args.NewValue;
-            Slider slider = (Slider)sender;
-            String str = "00" + value.ToString();
-            satk_label.Text = str.Substring(str.Length - 3);
-        }
-
-        public void OnSdefSliderValueChanged(object sender, ValueChangedEventArgs args)
-        {
-            int value = (int)args.NewValue;
-            Slider slider = (Slider)sender;
-            String str = "00" + value.ToString();
-            sdef_label.Text = str.Substring(str.Length - 3);
-        }
-
-        public void OnSpdSliderValueChanged(object sender, ValueChangedEventArgs args)
-        {
-            int value = (int)args.NewValue;
-            Slider slider = (Slider)sender;
-            String str = "00" + value.ToString();
-            spd_label.Text = str.Substring(str.Length - 3);
-        }
-
-        public async void OnButtonClicked(object sender, EventArgs args)
-        {
-
             bool isFormValid = true;
 
             if (pokemonName.Text == String.Empty)
@@ -107,62 +66,115 @@ namespace pokeInfo
                 frameName.BorderColor = Color.Red;
                 isFormValid = false;
             }
-            else
-            {
-                frameName.BorderColor = Color.FromHex("#00FBC1BC");
-            }
-            
+            else { frameName.BorderColor = Color.FromHex("#00FBC1BC");}
+
             if (pokemonNum.Text == String.Empty)
             {
                 isFormValid = false;
                 frameNum.BorderColor = Color.Red;
             }
-            else
-            {
-                frameNum.BorderColor = Color.FromHex("#00FBC1BC");
-            }
+            else { frameNum.BorderColor = Color.FromHex("#00FBC1BC"); }
 
             if (pickerType.SelectedItem == null)
             {
                 isFormValid = false;
                 pickerType.TextColor = Color.Red;
             }
-            else
-            {
-                pickerType.TextColor = Color.FromHex("#666666");
-            }
+            else { pickerType.TextColor = Color.FromHex("#666666"); }
 
             if (pokemonWeight.Text == String.Empty)
             {
                 frameWeight.BorderColor = Color.Red;
                 isFormValid = false;
             }
-            else
-            {
-                frameWeight.BorderColor = Color.FromHex("#00FBC1BC");
-            }
+            else { frameWeight.BorderColor = Color.FromHex("#00FBC1BC"); }
+
             if (pokemonHeight.Text == String.Empty)
             {
                 frameHeight.BorderColor = Color.Red;
                 isFormValid = false;
             }
-            else
-            {
-                frameHeight.BorderColor = Color.FromHex("#00FBC1BC");
-            }
+            else { frameHeight.BorderColor = Color.FromHex("#00FBC1BC"); }
 
-            if (isFormValid)
+            return isFormValid;
+        }
+       
+
+        private async void onCancel(object obj, EventArgs e)
+        {
+            if (IsEdit)
             {
-                var vm = PokemonViewModel.Instance;
-                PokemonDatabase pokemonDB = await PokemonDatabase.Instance;
+                await Navigation.PopAsync();
+            }else
+            {
+                this.clearInputs();
+            }
+        }
+
+        private void setPokemon(Pokemon pokemon)
+        {
+            imagePicker.Source = pokemon.ImgSrc ;
+            pokemonName.Text = pokemon.Name;
+            pokemonNum.Text = ""+pokemon.ID;
+            pickerType.SelectedIndex = pickerType.Items.IndexOf(pokemon.Type);
+            description.Text = pokemon.Description;
+            HPSlider.Value = pokemon.HP;
+            ATKSlider.Value = pokemon.ATK;
+            DEFSlider.Value = pokemon.DEF;
+            SATKSlider.Value = pokemon.SATK;
+            SDEFSlider.Value = pokemon.SDEF;
+            SPDSlider.Value = pokemon.SPD;
+            pokemonHeight.Text = ""+pokemon.Height;
+            pokemonWeight.Text = ""+pokemon.Weight;
+        }
+
+        private void clearInputs()
+        {
+            imagePicker.Source = "image.png";
+            pokemonName.Text = String.Empty;
+            pokemonNum.Text = String.Empty;
+            pickerType.SelectedItem = null;
+            description.Text = String.Empty;
+            HPSlider.Value = 0;
+            ATKSlider.Value = 0;
+            DEFSlider.Value = 0;
+            SATKSlider.Value = 0;
+            SDEFSlider.Value = 0;
+            SPDSlider.Value = 0;
+            pokemonHeight.Text = String.Empty;
+            pokemonWeight.Text = String.Empty;
+        }
+
+        private void clearTypes(object o, EventArgs e)
+        {
+            pickerType.SelectedItem = null;
+            pickerType2.SelectedItem = null;
+        }
+
+       
+
+        public async void OnButtonClicked(object sender, EventArgs args)
+        {
+            if (IsFormValid())
+            {
+
+                string type = "";
+
+                foreach (var typeinfo in Constants.TypeInfos)
+                {
+                    if (typeinfo.Value.Item2.ToLower() == pickerType.SelectedItem.ToString().ToLower())
+                    {
+                        type = typeinfo.Key;
+                    }
+                }
 
                 Models.Pokemon pokemon = new Models.Pokemon
                 {
                     Name = pokemonName.Text,
                     ID = Int32.Parse(pokemonNum.Text),
-                    ImgSrc = this.Image.Path,
-                    TypeColor = Constants.TypeInfos[pickerType.SelectedItem.ToString().ToLower()].Item1,
-                    Type = pickerType.SelectedItem.ToString().ToLower(),
+                    ImgSrc = this.Image == null ? currentPokemon.ImgSrc : this.Image.Path, 
+                    TypeColor = Constants.TypeInfos[type].Item1,
+                    Type = pickerType.SelectedItem.ToString(),
                     Description = description.Text,
                     HP = (int)HPSlider.Value,
                     ATK = (int)ATKSlider.Value,
@@ -174,31 +186,24 @@ namespace pokeInfo
                     Height = double.Parse(pokemonHeight.Text),
                 };
 
-                vm.addPokemon(pokemon);
-                await pokemonDB.AddPokemonAsync(pokemon);
+                var vm = PokemonViewModel.Instance;
+                PokemonDatabase pokemonDB = await PokemonDatabase.Instance;
 
-                imagePicker.Source = "";
-                pokemonName.Text = String.Empty;
-                pokemonNum.Text = String.Empty;
-                pickerType.SelectedItem = null;
-                description.Text = String.Empty;
-                HPSlider.Value = 0;
-                ATKSlider.Value = 0;
-                DEFSlider.Value = 0;
-                SATKSlider.Value = 0;
-                SDEFSlider.Value = 0;
-                SPDSlider.Value = 0;
-                hp_label.Text = "000";
-                atk_label.Text = "000";
-                def_label.Text = "000";
-                satk_label.Text = "000";
-                sdef_label.Text = "000";
-                spd_label.Text = "000";
-                pokemonHeight.Text = String.Empty;
-                pokemonWeight.Text = String.Empty;
+                vm.addPokemonToBase(pokemon);
 
+                if (IsEdit)
+                {
+                    Console.WriteLine("mes couilles sur ton front");
+                    vm.replacePokemonInList(pokemon);
+                }
+                else
+                {
+                    vm.addPokemonToList(pokemon);
+                }
+
+                this.clearInputs();
                 await Shell.Current.GoToAsync($"//List", true);
+                }
             }
         }
     }
-}

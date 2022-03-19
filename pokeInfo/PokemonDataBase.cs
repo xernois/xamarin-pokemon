@@ -71,5 +71,9 @@ namespace pokeInfo {
         {
             return Task.Run(() => 0 == Database.Table<Pokemon>().ToListAsync().Result.Count);
         }
+        public Task<int> UpdatePokemonAsync(Pokemon pokemon)
+        {
+            return Database.UpdateAsync(pokemon);
+        }
     }
 }

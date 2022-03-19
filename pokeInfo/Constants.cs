@@ -10,6 +10,11 @@ namespace pokeInfo
 
         public static readonly Dictionary<string, (string, string)> TypeInfos = new Dictionary<string, (string, string)>
         {
+            {"normal", ("#AAA67F", "Normal")},
+            {"fighting", ("#C12239", "Combat")},
+            {"flying", ("#A891EC", "Vol")},
+            {"poison", ("#A43E9E", "Poison")},
+            {"ground", ("#DEC16B", "Sol")},
             {"rock", ("#B69E31", "Roche") },
             {"ghost", ("#70559B", "Fantome")},
             {"steel", ("#B7B9D0", "Acier")},
@@ -19,11 +24,6 @@ namespace pokeInfo
             {"ice", ("#9AD6DF", "Glace")},
             {"dark", ("#75574C", "Ténèbres")},
             {"fairy", ("#E69EAC", "Fée")},
-            {"normal", ("#AAA67F", "Normal")},
-            {"fighting", ("#C12239", "Combat")},
-            {"flying", ("#A891EC", "Vol")},
-            {"poison", ("#A43E9E", "Poison")},
-            {"ground", ("#DEC16B", "Sol")},
             {"bug", ("#A7B723", "Insecte")},
             {"fire", ("#F57D31", "Feu")},
             {"electric", ("#F9CF30", "Electric")},

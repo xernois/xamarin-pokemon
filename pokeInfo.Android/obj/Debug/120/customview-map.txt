@@ -29,6 +29,7 @@ foreground;obj\Debug\120\res\mipmap-anydpi-v26\icon.xml
 foreground;obj\Debug\120\res\mipmap-anydpi-v26\icon_round.xml
 FrameLayout;D:\travail\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\lp\59\jl\res\layout\bottomtablayout.xml
 item;D:\travail\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\lp\59\jl\res\values\styles.xml
+item;obj\Debug\120\res\values\styles.xml
 LinearLayout;D:\travail\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\lp\59\jl\res\layout\bottomtablayout.xml
 paths;D:\travail\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\lp\1\jl\res\xml\file_provider_paths.xml
 paths;D:\travail\Xamarin\xamarin-pokemon\pokeInfo.Android\obj\Debug\120\lp\58\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml

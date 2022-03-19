@@ -34,8 +34,6 @@ namespace pokeInfo.Pages
         public async void BackToList(object sender, EventArgs args)
         {
 
-            await DisplayActionSheet("title", "cancel", "destruction", "test1", "test2");
-
             Navigation.PopAsync();
         }
 
