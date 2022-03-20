@@ -6,8 +6,8 @@
     <ContentPage.Content>
         <ScrollView BackgroundColor="{Binding TypeColor}">
             <StackLayout>
-                <!--  Btn de retour a la liste  -->
                 <StackLayout Orientation="Horizontal">
+                    <!-- BOUTON RETOUR A LA LISTE -->
                     <Button
                         Margin="20,0,0,0"
                         Padding="0"
@@ -21,6 +21,7 @@
                         TextColor="White"
                         Visual="Material"
                         WidthRequest="50" />
+                    <!-- NOM -->
                     <Label
                         FontAttributes="Bold"
                         FontSize="Title"
@@ -30,6 +31,7 @@
                         TextColor="White"
                         TextTransform="Uppercase"
                         VerticalTextAlignment="Center" />
+                    <!-- ID -->
                     <FlexLayout>
                         <Label
                             FontAttributes="Bold"
@@ -57,7 +59,7 @@
                         Margin="0,-80,0,0"
                         HeightRequest="150"
                         Source="{Binding ImgSrc}" />
-                    <!--  Liste des types  -->
+                    <!--  TYPES  -->
                     <FlexLayout Direction="Row" JustifyContent="center">
                         <Frame
                             Margin="10"
@@ -85,6 +87,7 @@
                                 TextColor="white" />
                         </Frame>
                     </FlexLayout>
+                    <!-- POIDS ET TAILLE -->
                     <FlexLayout JustifyContent="Center">
                         <Label FontSize="20" Text="{Binding Weight}" />
                         <Label
@@ -96,14 +99,15 @@
                             FontSize="20"
                             Text="{Binding Height}" />
                         <Label Text="m" VerticalTextAlignment="End" />
+                     <!--  DESCRIPTION  -->
                     </FlexLayout>
-                    <Label
-                        FontAttributes="Bold"
-                        FontSize="20"
-                        HorizontalOptions="CenterAndExpand"
-                        Text="A propos"
-                        TextColor="{Binding TypeColor}" />
-                    <!--  Poids Taille  -->
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="20"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="A propos"
+                            TextColor="{Binding TypeColor}" />
+                   
                     <FlexLayout />
                     <Label
                         Padding="30,10"
@@ -116,7 +120,7 @@
                         Text="Stats de base"
                         TextColor="{Binding TypeColor}" />
 
-
+                    <!--  STATS  -->
                     <Grid Margin="20,0,20,0" RowSpacing="0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="auto" />
@@ -316,7 +320,7 @@
                     </Grid>
 
 
-
+                 <!--  BOUTONS  -->
                 <FlexLayout JustifyContent="SpaceEvenly" Direction="Row" Padding="20,20,20,40">
                        
                     <Frame CornerRadius="8" HasShadow="True" Padding="0" >

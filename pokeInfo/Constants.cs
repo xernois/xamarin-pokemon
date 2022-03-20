@@ -8,6 +8,7 @@ namespace pokeInfo
     public static class Constants
     {
 
+        //Dictionnaire pour faire orrespondre un type de pokemon en anglais avec le type en francais et sa couleur
         public static readonly Dictionary<string, (string, string)> TypeInfos = new Dictionary<string, (string, string)>
         {
             {"normal", ("#AAA67F", "Normal")},
@@ -30,16 +31,20 @@ namespace pokeInfo
             {"dragon", ("#7037FF", "Dragon")}
         };
 
+        // le nom du fiier contenant les données
         public const string DatabaseFilename = "PokemonSQLite.db3";
 
         public const SQLite.SQLiteOpenFlags Flags =
-            // open the database in read/write mode
+            // flag specifiant le type d'acces a la BDD
             SQLite.SQLiteOpenFlags.ReadWrite |
-            // create the database if it doesn't exist
+            // Si la BDD n'existe pas, la creer
             SQLite.SQLiteOpenFlags.Create |
-            // enable multi-threaded database access
+            // active le multitreading
             SQLite.SQLiteOpenFlags.SharedCache;
 
+        //Fonction qui retourne le cemin d'acces a la BDD
+        //Entrées : 
+        //Sorties : String
         public static string DatabasePath
         {
             get

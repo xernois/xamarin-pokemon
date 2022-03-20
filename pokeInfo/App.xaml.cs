@@ -6,6 +6,9 @@ namespace pokeInfo
 {
     public partial class App : Application
     {
+        //Initialise l'app et met MainPage en page d'accueil
+        //Entrées :
+        //Sorties :
         public App()
         {
             InitializeComponent();
@@ -13,16 +16,11 @@ namespace pokeInfo
             MainPage = new MainPage();
         }
 
-        protected override void OnStart()
-        {
-        }
+        //Fonction qui ne font rien mais qui sont implementées
+        protected override void OnStart(){}
 
-        protected override void OnSleep()
-        {
-        }
+        protected override void OnSleep(){}
 
-        protected override void OnResume()
-        {
-        }
+        protected override void OnResume(){}
     }
 }

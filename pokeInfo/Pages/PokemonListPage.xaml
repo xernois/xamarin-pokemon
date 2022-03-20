@@ -18,7 +18,7 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <FlexLayout AlignItems="Center" Direction="Column">
-
+                            <!-- FOND COULEUR -->
                             <Frame
                                 Padding="0"
                                 BackgroundColor="{Binding TypeColor}"
@@ -28,7 +28,7 @@
                                 HorizontalOptions="Center"
                                 TranslationY="60"
                                 WidthRequest="100">
-
+                                <!-- NOM -->
                                 <StackLayout>
                                     <Label
                                         FontAttributes="Bold"
@@ -41,7 +41,7 @@
                                         VerticalTextAlignment="End" />
                                 </StackLayout>
                             </Frame>
-
+                            <!-- IMAGE -->
                             <Image
                                 HeightRequest="80"
                                 Source="{Binding ImgSrc}"

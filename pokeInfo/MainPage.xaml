@@ -6,17 +6,18 @@
        TabBarBackgroundColor="#FF1C1C"
        NavBarIsVisible="False"
        >
-
+    <!-- NAVIGATION -->
     <TabBar  x:Name="main_tab_bar" TabIndex="1" FlyoutDisplayOptions="AsSingleItem" FlyoutItemIsVisible="True">
-        <ShellContent Route="List" x:Name="main_tab_bar_list" Title="List" Icon="globeNav.png">
+        <!-- LISTE -->
+        <ShellContent Route="List" x:Name="main_tab_bar_list" Title="Liste" Icon="globeNav.png">
             <pokeInfo:PokemonListPage/>
         </ShellContent>
-
-        <ShellContent Route="Home" x:Name="main_tab_bar_home" Title="Home" Icon="pokeBall.png" >
+        <!-- HOME -->
+        <ShellContent Route="Home" x:Name="main_tab_bar_home" Title="Accueil" Icon="pokeBall.png" >
             <pokeInfo:HomePage/>
         </ShellContent>
-
-        <ShellContent Route="Add"  x:Name="main_tab_bar_add" Title="Add" Icon="plusNav.png" >
+        <!-- AJOUT -->
+        <ShellContent Route="Add"  x:Name="main_tab_bar_add" Title="Ajouter" Icon="plusNav.png" >
             <pokeInfo:AddPokemonePage/>
         </ShellContent>
     </TabBar>

@@ -9,6 +9,9 @@ namespace pokeInfo
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomePage : ContentPage
     {
+        //Constructeur de la page
+        //Entrées : 
+        //Sorties :
         public HomePage()
         {
             InitializeComponent();

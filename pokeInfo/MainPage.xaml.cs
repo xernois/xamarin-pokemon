@@ -10,12 +10,18 @@ namespace pokeInfo
 {
     public partial class MainPage : Shell
     {
+        //Contructeur de la page principale l'app
+        //Entrées :
+        //Sorties :
         public MainPage()
         {
             InitializeComponent();
             InitPageHome();
         }
 
+        //Fonction pour initialiser la main page et definissant la page par defaut
+        //Entrées :
+        //Sorties : 
         private void InitPageHome()
         {
             main_tab_bar.CurrentItem = main_tab_bar_home;
