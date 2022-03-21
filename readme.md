@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Dans le cadre du cours M4105C (développement mobile), nous avions à réaliser une applications sous Xamarin.forms avec l'api `PokeApi`. Cette dernière devait contenir certaines fonctionnalités essentielles tel que :
+Dans le cadre du cours M4104C (développement mobile), nous avions à réaliser une applications sous Xamarin.forms avec l'api `PokeApi`. Cette dernière devait contenir certaines fonctionnalités essentielles tel que :
 
 - une page d'accueil
 - une page permettant l'affichage d'un liste de pokemon
